@@ -1,0 +1,14 @@
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "scripts": {
+   "dev": "concurrently \"tailwindcss -i src/input.css -o src/output.css --watch\" \"browser-sync start --server . --files src/output.css,*.html,**/*.js\"",
+    "build": "tailwindcss -i ./src/input.css -o ./src/output.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.0",
+    "browser-sync": "^3.0.4",
+    "concurrently": "^10.0.3",
+    "tailwindcss": "^4.0.0"
+  }
+}
