@@ -1,0 +1,62 @@
+
+@import "tailwindcss";
+
+/* Dark Mode */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* AbdOliDesk Theme */
+@theme {
+    --font-sans: "Inter", "Vazirmatn", ui-sans-serif, system-ui, sans-serif;
+
+    --color-brand-white: #ffffff;
+    --color-brand-light: #f5f5f7;
+    --color-brand-gray: #e8e8ed;
+    --color-brand-muted: #86868b;
+    --color-brand-dark: #1d1d1f;
+
+    --radius-card: 24px;
+    --radius-section: 32px;
+    --radius-button: 999px;
+
+    --shadow-soft: 0 4px 24px rgb(0 0 0 / 5%);
+    --shadow-card: 0 8px 32px rgb(0 0 0 / 7%);
+
+    --animate-fade-up: fadeUp 0.7s ease-out both;
+
+    @keyframes fadeUp {
+        from {
+            opacity: 0;
+            transform: translateY(16px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Base Styles */
+@layer base {
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: var(--font-sans);
+        background-color: #ffffff;
+        color: #1d1d1f;
+    }
+
+    button,
+    [type="button"],
+    [type="submit"],
+    [type="reset"],
+    [role="button"] {
+        cursor: pointer;
+    }
+}
