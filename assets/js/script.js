@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
   // for change dark mode and light mode
-   
-  // end for change dark mode and light mode
 
   const root = document.documentElement;
   const languageButton = document.getElementById("languageToggle");
@@ -54,4 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   setLanguage(language);
+  
+  // end for change dark mode and light mode
 });
