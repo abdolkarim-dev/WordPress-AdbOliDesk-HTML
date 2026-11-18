@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f5f7" />
+
+    <title>AbdOliDesk</title>
+
+    <link href="./assets/css/output.css" rel="stylesheet" />
+    <link href="./assets/css/customeStyle.css" rel="stylesheet" />
+    <link href="./assets/font/font.css" rel="stylesheet" />
+  </head>
+
+  <body class="bg-white text-[#1d1d1f] antialiased transition-colors duration-300 dark:bg-[#111113] dark:text-[#f5f5f7]">
+    <div class="bg-[#f5f5f7] px-4 py-2.5 text-center text-[11px] text-[#515154] dark:bg-[#202024] dark:text-[#d1d1d6]">
+      <span data-en="Thoughtful essentials for your everyday workspace." data-fa="لوازم کاربردی و خوش‌ساخت برای فضای کار روزمره شما."
+        >Thoughtful essentials for your everyday workspace.</span
+      >
+    </div>
+
+    <header class="sticky top-0 z-40 border-b border-black/[.06] bg-white/90 backdrop-blur-xl dark:border-white/[.08] dark:bg-[#111113]/90">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-4 lg:px-8">
+        <a href="#home" class="shrink-0 text-[19px] font-semibold tracking-[-.055em]">AbdOliDesk<span class="text-[#86868b]">.</span></a>
+
+        <nav class="hidden items-center gap-7 text-[12px] text-[#555559] dark:text-[#c5c5ca] md:flex">
+          <a href="#shop" class="transition hover:text-black dark:hover:text-white" data-en="Store" data-fa="فروشگاه">Store</a>
+          <a href="#categories" class="transition hover:text-black dark:hover:text-white" data-en="Categories" data-fa="دسته‌بندی‌ها">Categories</a>
+          <a href="#new" class="transition hover:text-black dark:hover:text-white" data-en="New arrivals" data-fa="تازه‌ها">New arrivals</a>
+          <a href="#about" class="transition hover:text-black dark:hover:text-white" data-en="About" data-fa="درباره ما">About</a>
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <button
+            id="languageToggle"
+            class="focus-ring rounded-full px-3 py-2 text-[11px] font-medium text-[#424245] transition hover:bg-[#f5f5f7] dark:text-[#e5e5e8] dark:hover:bg-[#252529]"
+            aria-label="Change language"
+          >
+            FA
+          </button>
+          <button
+            id="themeToggle"
+            class="focus-ring grid h-9 w-9 place-items-center rounded-full text-[#424245] transition hover:bg-[#f5f5f7] dark:text-[#e5e5e8] dark:hover:bg-[#252529]"
+            aria-label="Toggle color theme"
+          >
+            <svg id="sunIcon" class="hidden h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" />
+            </svg>
+            <svg id="moonIcon" class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.6 8.6 0 1 0 20.5 14.2Z" />
+            </svg>
+          </button>
+          <button
+            class="focus-ring hidden h-9 w-9 place-items-center rounded-full text-[#424245] transition hover:bg-[#f5f5f7] dark:text-[#e5e5e8] dark:hover:bg-[#252529] sm:grid"
+            aria-label="Search"
+          >
+            <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <circle cx="10.8" cy="10.8" r="6.8" />
+              <path d="m16 16 5 5" />
+            </svg>
+          </button>
+          <a
+            href="#shop"
+            class="focus-ring hidden rounded-full bg-[#1d1d1f] px-4 py-2.5 text-[11px] font-medium text-white transition hover:bg-black dark:bg-white dark:text-[#1d1d1f] dark:hover:bg-[#e5e5e7] sm:inline-flex"
+            data-en="Bag (0)"
+            data-fa="سبد خرید (۰)"
+            >Bag (0)</a
+          >
+          <button
+            id="mobileMenuButton"
+            class="focus-ring grid h-9 w-9 place-items-center rounded-full hover:bg-[#f5f5f7] dark:hover:bg-[#252529] md:hidden"
+            aria-label="Open menu"
+          >
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+          </button>
+        </div>
+      </div>
+      <nav id="mobileMenu" class="hidden border-t border-black/[.06] px-5 py-4 dark:border-white/[.08] md:hidden">
+        <div class="flex flex-col gap-4 text-[13px] text-[#555559] dark:text-[#d1d1d6]">
+          <a href="#shop" data-en="Store" data-fa="فروشگاه">Store</a>
+          <a href="#categories" data-en="Categories" data-fa="دسته‌بندی‌ها">Categories</a>
+          <a href="#new" data-en="New arrivals" data-fa="تازه‌ها">New arrivals</a>
+          <a href="#about" data-en="About" data-fa="درباره ما">About</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="shop-page" class="mx-auto max-w-7xl px-5 py-10 lg:px-8">
+      <!-- Page Heading -->
+      <div class="mb-8">
+        <p class="text-[10px] font-semibold uppercase tracking-[.18em] text-[#86868b]">AbdOliDesk / Store</p>
+
+        <div class="mt-3 flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <h1 class="text-3xl font-semibold tracking-[-.05em] sm:text-4xl">Shop all products</h1>
+            <p class="mt-2 text-sm text-[#86868b]">Thoughtful essentials for your everyday workspace.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Layout -->
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-[240px_1fr]">
+        <!-- Filters Sidebar -->
+        <aside class="space-y-7">
+          <!-- Categories -->
+          <div class="border-b border-black/[.08] pb-6 dark:border-white/[.08]">
+            <h3 class="mb-4 text-sm font-semibold">Categories</h3>
+
+            <div class="space-y-3 text-[13px] text-[#6e6e73] dark:text-[#b8b8be]">
+              <label class="flex cursor-pointer items-center justify-between">
+                <span class="flex items-center gap-2">
+                  <input type="checkbox" class="accent-[#1d1d1f] dark:accent-white" />
+                  Desk setup
+                </span>
+                <span class="text-[11px]">12</span>
+              </label>
+
+              <label class="flex cursor-pointer items-center justify-between">
+                <span class="flex items-center gap-2">
+                  <input type="checkbox" class="accent-[#1d1d1f] dark:accent-white" />
+                  Keyboards & mice
+                </span>
+                <span class="text-[11px]">18</span>
+              </label>
+
+              <label class="flex cursor-pointer items-center justify-between">
+                <span class="flex items-center gap-2">
+                  <input type="checkbox" class="accent-[#1d1d1f] dark:accent-white" />
+                  Lighting
+                </span>
+                <span class="text-[11px]">8</span>
+              </label>
+
+              <label class="flex cursor-pointer items-center justify-between">
+                <span class="flex items-center gap-2">
+                  <input type="checkbox" class="accent-[#1d1d1f] dark:accent-white" />
+                  Tech accessories
+                </span>
+                <span class="text-[11px]">24</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Price -->
+          <div class="border-b border-black/[.08] pb-6 dark:border-white/[.08]">
+            <h3 class="mb-4 text-sm font-semibold">Price range</h3>
+
+            <div class="flex items-center gap-3">
+              <input
+                type="number"
+                placeholder="Min"
+                class="w-full rounded-xl border border-black/[.08] bg-transparent px-3 py-2.5 text-xs outline-none focus:border-black dark:border-white/[.12] dark:focus:border-white"
+              />
+
+              <span class="text-[#86868b]">–</span>
+
+              <input
+                type="number"
+                placeholder="Max"
+                class="w-full rounded-xl border border-black/[.08] bg-transparent px-3 py-2.5 text-xs outline-none focus:border-black dark:border-white/[.12] dark:focus:border-white"
+              />
+            </div>
+          </div>
+
+          <!-- Brand -->
+          <div class="border-b border-black/[.08] pb-6 dark:border-white/[.08]">
+            <h3 class="mb-4 text-sm font-semibold">Brand</h3>
+
+            <div class="space-y-3 text-[13px] text-[#6e6e73] dark:text-[#b8b8be]">
+              <label class="flex cursor-pointer items-center gap-2">
+                <input type="checkbox" class="accent-[#1d1d1f] dark:accent-white" />
+                Logitech
+              </label>
+
+              <label class="flex cursor-pointer items-center gap-2">
+                <input type="checkbox" class="accent-[#1d1d1f] dark:accent-white" />
+                Apple
+              </label>
+
+              <label class="flex cursor-pointer items-center gap-2">
+                <input type="checkbox" class="accent-[#1d1d1f] dark:accent-white" />
+                Anker
+              </label>
+
+              <label class="flex cursor-pointer items-center gap-2">
+                <input type="checkbox" class="accent-[#1d1d1f] dark:accent-white" />
+                Samsung
+              </label>
+            </div>
+          </div>
+
+          <!-- Availability -->
+          <div class="border-b border-black/[.08] pb-6 dark:border-white/[.08]">
+            <h3 class="mb-4 text-sm font-semibold">Availability</h3>
+
+            <label class="flex cursor-pointer items-center gap-2 text-[13px] text-[#6e6e73] dark:text-[#b8b8be]">
+              <input type="checkbox" class="accent-[#1d1d1f] dark:accent-white" />
+              In stock
+            </label>
+          </div>
+
+          <button
+            class="w-full rounded-full border border-black/[.12] py-3 text-xs font-medium transition hover:bg-[#f5f5f7] dark:border-white/[.12] dark:hover:bg-[#252529]"
+          >
+            Clear all filters
+          </button>
+        </aside>
+
+        <!-- Products Area -->
+        <section>
+          <!-- Top Toolbar -->
+          <div class="mb-6 flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+              <p class="text-xs text-[#86868b]">Showing <span class="font-medium text-[#1d1d1f] dark:text-white">24</span> products</p>
+
+              <button class="rounded-full border border-black/[.08] px-3 py-2 text-[11px] lg:hidden dark:border-white/[.1]">Filters</button>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="hidden items-center gap-1 sm:flex">
+                <button class="rounded-lg p-2 text-[#86868b] hover:bg-[#f5f5f7] dark:hover:bg-[#252529]">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="3" y="3" width="7" height="7" />
+                    <rect x="14" y="3" width="7" height="7" />
+                    <rect x="3" y="14" width="7" height="7" />
+                    <rect x="14" y="14" width="7" height="7" />
+                  </svg>
+                </button>
+
+                <button class="rounded-lg p-2 text-[#86868b] hover:bg-[#f5f5f7] dark:hover:bg-[#252529]">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="3" y="3" width="5" height="18" />
+                    <rect x="13" y="3" width="8" height="18" />
+                  </svg>
+                </button>
+              </div>
+
+              <select class="rounded-full border border-black/[.08] bg-transparent px-4 py-2.5 text-xs outline-none dark:border-white/[.1]">
+                <option>Featured</option>
+                <option>Price: low to high</option>
+                <option>Price: high to low</option>
+                <option>Newest</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Product Grid -->
+          <div class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+            <!-- Product 1 -->
+            <article class="product-card group">
+              <div class="relative overflow-hidden rounded-[22px] bg-[#f5f5f7] dark:bg-[#202024]">
+                <img
+                  src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=700&q=80"
+                  alt="Laptop stand"
+                  class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+
+                <button
+                  class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-white/90 text-lg text-[#424245] backdrop-blur transition hover:scale-110 dark:bg-black/50 dark:text-white"
+                >
+                  ♡
+                </button>
+              </div>
+
+              <div class="pt-3">
+                <p class="text-[9px] uppercase tracking-[.13em] text-[#86868b]">Desk setup</p>
+                <h3 class="mt-1 text-[12px] font-medium">Aluminium Laptop Stand</h3>
+                <p class="mt-2 text-xs font-semibold">$48.00</p>
+              </div>
+            </article>
+
+            <!-- Product 2 -->
+            <article class="product-card group">
+              <div class="relative overflow-hidden rounded-[22px] bg-[#f5f5f7] dark:bg-[#202024]">
+                <img
+                  src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=700&q=80"
+                  alt="Mechanical keyboard"
+                  class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+
+                <button
+                  class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-white/90 text-lg text-[#424245] backdrop-blur transition hover:scale-110 dark:bg-black/50 dark:text-white"
+                >
+                  ♡
+                </button>
+              </div>
+
+              <div class="pt-3">
+                <p class="text-[9px] uppercase tracking-[.13em] text-[#86868b]">Input devices</p>
+                <h3 class="mt-1 text-[12px] font-medium">Wireless Mechanical Keyboard</h3>
+                <p class="mt-2 text-xs font-semibold">$89.00</p>
+              </div>
+            </article>
+
+            <!-- Product 3 -->
+            <article class="product-card group">
+              <div class="relative overflow-hidden rounded-[22px] bg-[#f5f5f7] dark:bg-[#202024]">
+                <img
+                  src="https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=700&q=80"
+                  alt="Wireless mouse"
+                  class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+
+                <span
+                  class="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1.5 text-[9px] font-medium text-[#424245] backdrop-blur dark:bg-black/50 dark:text-white"
+                >
+                  New
+                </span>
+
+                <button
+                  class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-white/90 text-lg text-[#424245] backdrop-blur transition hover:scale-110 dark:bg-black/50 dark:text-white"
+                >
+                  ♡
+                </button>
+              </div>
+
+              <div class="pt-3">
+                <p class="text-[9px] uppercase tracking-[.13em] text-[#86868b]">Input devices</p>
+                <h3 class="mt-1 text-[12px] font-medium">Contour Wireless Mouse</h3>
+                <p class="mt-2 text-xs font-semibold">$56.00</p>
+              </div>
+            </article>
+
+            <!-- Product 4 -->
+            <article class="product-card group">
+              <div class="relative overflow-hidden rounded-[22px] bg-[#f5f5f7] dark:bg-[#202024]">
+                <img
+                  src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=700&q=80"
+                  alt="Desk lamp"
+                  class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+
+                <button
+                  class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-white/90 text-lg text-[#424245] backdrop-blur transition hover:scale-110 dark:bg-black/50 dark:text-white"
+                >
+                  ♡
+                </button>
+              </div>
+
+              <div class="pt-3">
+                <p class="text-[9px] uppercase tracking-[.13em] text-[#86868b]">Lighting</p>
+                <h3 class="mt-1 text-[12px] font-medium">Minimal Desk Light</h3>
+                <p class="mt-2 text-xs font-semibold">$64.00</p>
+              </div>
+            </article>
+
+            <!-- Product 5 -->
+            <article class="product-card group">
+              <div class="relative overflow-hidden rounded-[22px] bg-[#f5f5f7] dark:bg-[#202024]">
+                <img
+                  src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=700&q=80"
+                  alt="Laptop"
+                  class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+                <button
+                  class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-white/90 text-lg text-[#424245] backdrop-blur dark:bg-black/50 dark:text-white"
+                >
+                  ♡
+                </button>
+              </div>
+
+              <div class="pt-3">
+                <p class="text-[9px] uppercase tracking-[.13em] text-[#86868b]">Tech accessories</p>
+                <h3 class="mt-1 text-[12px] font-medium">MacBook Pro 14</h3>
+                <p class="mt-2 text-xs font-semibold">$1,599.00</p>
+              </div>
+            </article>
+
+            <!-- Product 6 -->
+            <article class="product-card group">
+              <div class="relative overflow-hidden rounded-[22px] bg-[#f5f5f7] dark:bg-[#202024]">
+                <img
+                  src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=700&q=80"
+                  alt="Headphones"
+                  class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+                <span
+                  class="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1.5 text-[9px] font-medium text-[#424245] backdrop-blur dark:bg-black/50 dark:text-white"
+                >
+                  Best seller
+                </span>
+                <button
+                  class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-white/90 text-lg text-[#424245] backdrop-blur dark:bg-black/50 dark:text-white"
+                >
+                  ♡
+                </button>
+              </div>
+
+              <div class="pt-3">
+                <p class="text-[9px] uppercase tracking-[.13em] text-[#86868b]">Audio</p>
+                <h3 class="mt-1 text-[12px] font-medium">Wireless Headphones</h3>
+                <p class="mt-2 text-xs font-semibold">$129.00</p>
+              </div>
+            </article>
+
+            <!-- Product 7 -->
+            <article class="product-card group">
+              <div class="relative overflow-hidden rounded-[22px] bg-[#f5f5f7] dark:bg-[#202024]">
+                <img
+                  src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=700&q=80"
+                  alt="Computer workspace"
+                  class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+                <button
+                  class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-white/90 text-lg text-[#424245] backdrop-blur dark:bg-black/50 dark:text-white"
+                >
+                  ♡
+                </button>
+              </div>
+
+              <div class="pt-3">
+                <p class="text-[9px] uppercase tracking-[.13em] text-[#86868b]">Desk setup</p>
+                <h3 class="mt-1 text-[12px] font-medium">Studio Display</h3>
+                <p class="mt-2 text-xs font-semibold">$799.00</p>
+              </div>
+            </article>
+
+            <!-- Product 8 -->
+            <article class="product-card group">
+              <div class="relative overflow-hidden rounded-[22px] bg-[#f5f5f7] dark:bg-[#202024]">
+                <img
+                  src="https://images.unsplash.com/photo-1524678606370-a47ad44c5b5c?auto=format&fit=crop&w=700&q=80"
+                  alt="Smart speaker"
+                  class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+                <button
+                  class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-white/90 text-lg text-[#424245] backdrop-blur dark:bg-black/50 dark:text-white"
+                >
+                  ♡
+                </button>
+              </div>
+
+              <div class="pt-3">
+                <p class="text-[9px] uppercase tracking-[.13em] text-[#86868b]">Tech accessories</p>
+                <h3 class="mt-1 text-[12px] font-medium">Smart Home Speaker</h3>
+                <p class="mt-2 text-xs font-semibold">$99.00</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Pagination -->
+          <div class="mt-12 flex items-center justify-center gap-2">
+            <button class="grid h-9 w-9 place-items-center rounded-full border border-black/[.08] text-xs dark:border-white/[.1]">←</button>
+
+            <button class="grid h-9 w-9 place-items-center rounded-full bg-[#1d1d1f] text-xs text-white dark:bg-white dark:text-[#1d1d1f]">1</button>
+
+            <button class="grid h-9 w-9 place-items-center rounded-full border border-black/[.08] text-xs dark:border-white/[.1]">2</button>
+
+            <button class="grid h-9 w-9 place-items-center rounded-full border border-black/[.08] text-xs dark:border-white/[.1]">3</button>
+
+            <span class="px-2 text-xs text-[#86868b]">...</span>
+
+            <button class="grid h-9 w-9 place-items-center rounded-full border border-black/[.08] text-xs dark:border-white/[.1]">8</button>
+
+            <button class="grid h-9 w-9 place-items-center rounded-full border border-black/[.08] text-xs dark:border-white/[.1]">→</button>
+          </div>
+        </section>
+      </div>
+    </main> 
+
+    <footer class="border-t border-black/[.06] dark:border-white/[.08]">
+      <div class="mx-auto flex max-w-7xl flex-col gap-6 px-5 py-9 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+        <div>
+          <a href="#home" class="text-[17px] font-semibold tracking-[-.05em]">AbdOliDesk<span class="text-[#86868b]">.</span></a>
+          <p class="mt-2 text-[10px] text-[#86868b]" data-en="A better space for everyday work." data-fa="فضایی بهتر برای کارهای هر روز.">
+            A better space for everyday work.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-x-6 gap-y-3 text-[11px] text-[#6e6e73] dark:text-[#b8b8be]">
+          <a href="#shop" data-en="Store" data-fa="فروشگاه">Store</a><a href="#about" data-en="About" data-fa="درباره ما">About</a
+          ><a href="#" data-en="Contact" data-fa="تماس">Contact</a
+          ><a href="#" data-en="Shipping & returns" data-fa="ارسال و بازگشت">Shipping & returns</a>
+        </div>
+        <p class="text-[10px] text-[#86868b]">© 2026 AbdOliDesk</p>
+      </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
