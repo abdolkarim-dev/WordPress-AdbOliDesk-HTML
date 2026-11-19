@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f5f7" />
+
+    <title>AbdOliDesk</title>
+
+    <link href="./assets/css/output.css" rel="stylesheet" />
+    <link href="./assets/css/customeStyle.css" rel="stylesheet" />
+    <link href="./assets/font/font.css" rel="stylesheet" />
+  </head>
+
+  <body class="bg-white text-[#1d1d1f] antialiased transition-colors duration-300 dark:bg-[#111113] dark:text-[#f5f5f7]">
+    <div class="bg-[#f5f5f7] px-4 py-2.5 text-center text-[11px] text-[#515154] dark:bg-[#202024] dark:text-[#d1d1d6]">
+      <span data-en="Thoughtful essentials for your everyday workspace." data-fa="لوازم کاربردی و خوش‌ساخت برای فضای کار روزمره شما."
+        >Thoughtful essentials for your everyday workspace.</span
+      >
+    </div>
+
+    <header class="sticky top-0 z-40 border-b border-black/[.06] bg-white/90 backdrop-blur-xl dark:border-white/[.08] dark:bg-[#111113]/90">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-4 lg:px-8">
+        <a href="#home" class="shrink-0 text-[19px] font-semibold tracking-[-.055em]">AbdOliDesk<span class="text-[#86868b]">.</span></a>
+
+        <nav class="hidden items-center gap-7 text-[12px] text-[#555559] dark:text-[#c5c5ca] md:flex">
+          <a href="#shop" class="transition hover:text-black dark:hover:text-white" data-en="Store" data-fa="فروشگاه">Store</a>
+          <a href="#categories" class="transition hover:text-black dark:hover:text-white" data-en="Categories" data-fa="دسته‌بندی‌ها">Categories</a>
+          <a href="#new" class="transition hover:text-black dark:hover:text-white" data-en="New arrivals" data-fa="تازه‌ها">New arrivals</a>
+          <a href="#about" class="transition hover:text-black dark:hover:text-white" data-en="About" data-fa="درباره ما">About</a>
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <button
+            id="languageToggle"
+            class="focus-ring rounded-full px-3 py-2 text-[11px] font-medium text-[#424245] transition hover:bg-[#f5f5f7] dark:text-[#e5e5e8] dark:hover:bg-[#252529]"
+            aria-label="Change language"
+          >
+            FA
+          </button>
+          <button
+            id="themeToggle"
+            class="focus-ring grid h-9 w-9 place-items-center rounded-full text-[#424245] transition hover:bg-[#f5f5f7] dark:text-[#e5e5e8] dark:hover:bg-[#252529]"
+            aria-label="Toggle color theme"
+          >
+            <svg id="sunIcon" class="hidden h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" />
+            </svg>
+            <svg id="moonIcon" class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.6 8.6 0 1 0 20.5 14.2Z" />
+            </svg>
+          </button>
+          <button
+            class="focus-ring hidden h-9 w-9 place-items-center rounded-full text-[#424245] transition hover:bg-[#f5f5f7] dark:text-[#e5e5e8] dark:hover:bg-[#252529] sm:grid"
+            aria-label="Search"
+          >
+            <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <circle cx="10.8" cy="10.8" r="6.8" />
+              <path d="m16 16 5 5" />
+            </svg>
+          </button>
+          <a
+            href="#shop"
+            class="focus-ring hidden rounded-full bg-[#1d1d1f] px-4 py-2.5 text-[11px] font-medium text-white transition hover:bg-black dark:bg-white dark:text-[#1d1d1f] dark:hover:bg-[#e5e5e7] sm:inline-flex"
+            data-en="Bag (0)"
+            data-fa="سبد خرید (۰)"
+            >Bag (0)</a
+          >
+          <button
+            id="mobileMenuButton"
+            class="focus-ring grid h-9 w-9 place-items-center rounded-full hover:bg-[#f5f5f7] dark:hover:bg-[#252529] md:hidden"
+            aria-label="Open menu"
+          >
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+          </button>
+        </div>
+      </div>
+      <nav id="mobileMenu" class="hidden border-t border-black/[.06] px-5 py-4 dark:border-white/[.08] md:hidden">
+        <div class="flex flex-col gap-4 text-[13px] text-[#555559] dark:text-[#d1d1d6]">
+          <a href="#shop" data-en="Store" data-fa="فروشگاه">Store</a>
+          <a href="#categories" data-en="Categories" data-fa="دسته‌بندی‌ها">Categories</a>
+          <a href="#new" data-en="New arrivals" data-fa="تازه‌ها">New arrivals</a>
+          <a href="#about" data-en="About" data-fa="درباره ما">About</a>
+        </div>
+      </nav>
+    </header>
+
+    <main
+      id="not-found-page"
+      class="relative flex min-h-[75vh] items-center justify-center overflow-hidden bg-[#f5f5f7] px-5 py-20 text-[#1d1d1f] dark:bg-[#111113] dark:text-white"
+    >
+      <!-- Background Decorations -->
+      <div class="pointer-events-none absolute -left-32 -top-32 h-80 w-80 rounded-full bg-[#0D9373]/10 blur-3xl"></div>
+      <div class="pointer-events-none absolute -bottom-32 -right-32 h-80 w-80 rounded-full bg-[#0D9373]/10 blur-3xl"></div>
+
+      <div class="relative mx-auto max-w-2xl text-center">
+        <!-- Illustration -->
+        <div class="relative mx-auto mb-8 flex h-48 w-48 items-center justify-center sm:h-60 sm:w-60">
+          <div class="absolute inset-0 rounded-full bg-[#0D9373]/10"></div>
+          <div class="absolute inset-5 rounded-full border border-[#0D9373]/20"></div>
+
+          <div
+            class="relative flex h-32 w-32 items-center justify-center rounded-[2rem] bg-white shadow-xl shadow-black/5 dark:bg-[#202024] sm:h-40 sm:w-40"
+          >
+            <svg viewBox="0 0 120 120" fill="none" class="h-24 w-24 sm:h-28 sm:w-28">
+              <path d="M35 42V32C35 18 46 10 60 10C74 10 85 18 85 32V42" stroke="#0D9373" stroke-width="5" stroke-linecap="round" />
+              <path d="M25 42H95L102 104H18L25 42Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round" />
+              <path d="M45 67L53 75M53 67L45 75" stroke="#0D9373" stroke-width="4" stroke-linecap="round" />
+              <path d="M67 67L75 75M75 67L67 75" stroke="#0D9373" stroke-width="4" stroke-linecap="round" />
+              <path d="M49 88C55 82 65 82 71 88" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+            </svg>
+          </div>
+
+          <span
+            class="absolute right-1 top-5 flex h-10 w-10 items-center justify-center rounded-full bg-[#0D9373] text-sm font-bold text-white shadow-lg"
+            >?</span
+          >
+          <span class="absolute bottom-5 left-1 text-3xl font-bold text-[#0D9373]">.</span>
+        </div>
+
+        <!-- Text -->
+        <p class="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-[#0D9373]" data-en="Error 404" data-fa="خطای ۴۰۴">Error 404</p>
+
+        <h1 class="text-4xl font-bold tracking-tight sm:text-6xl" data-en="Page Not Found" data-fa="صفحه پیدا نشد">Page Not Found</h1>
+
+        <p
+          class="mx-auto mt-5 max-w-md text-sm leading-7 text-gray-500 dark:text-gray-400 sm:text-base"
+          data-en="Oops! The page you're looking for doesn't exist or may have been moved. Let's get you back on track."
+          data-fa="متأسفیم! صفحه‌ای که به دنبال آن هستید وجود ندارد یا ممکن است منتقل شده باشد. بیایید به صفحه اصلی برگردیم."
+        >
+          Oops! The page you're looking for doesn't exist or may have been moved. Let's get you back on track.
+        </p>
+
+        <!-- Actions -->
+        <div class="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <a
+            href="./index.html"
+            class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#0D9373] px-8 py-4 text-sm font-semibold text-white transition hover:bg-[#08785e] sm:w-auto"
+          >
+            <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4 flip-rtl">
+              <path d="M19 12H5M12 19L5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span data-en="Back to Home" data-fa="بازگشت به صفحه اصلی">Back to Home</span>
+          </a>
+
+          <a
+            href="./shop.html"
+            class="inline-flex w-full items-center justify-center rounded-full border border-gray-200 px-8 py-4 text-sm font-semibold transition hover:border-[#0D9373] hover:text-[#0D9373] dark:border-gray-700 sm:w-auto"
+            data-en="Explore Shop"
+            data-fa="مشاهده فروشگاه"
+          >
+            Explore Shop
+          </a>
+        </div>
+
+        <!-- Bottom Text -->
+        <p class="mt-12 text-xs text-gray-400 dark:text-gray-500">
+          <span data-en="Need help?" data-fa="به کمک نیاز دارید؟">Need help?</span>
+          <a href="./contact.html" class="font-semibold text-[#0D9373] hover:underline" data-en="Contact us" data-fa="تماس با ما">Contact us</a>
+        </p>
+      </div>
+    </main>
+
+    <footer class="border-t border-black/[.06] dark:border-white/[.08]">
+      <div class="mx-auto flex max-w-7xl flex-col gap-6 px-5 py-9 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+        <div>
+          <a href="#home" class="text-[17px] font-semibold tracking-[-.05em]">AbdOliDesk<span class="text-[#86868b]">.</span></a>
+          <p class="mt-2 text-[10px] text-[#86868b]" data-en="A better space for everyday work." data-fa="فضایی بهتر برای کارهای هر روز.">
+            A better space for everyday work.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-x-6 gap-y-3 text-[11px] text-[#6e6e73] dark:text-[#b8b8be]">
+          <a href="#shop" data-en="Store" data-fa="فروشگاه">Store</a><a href="#about" data-en="About" data-fa="درباره ما">About</a
+          ><a href="#" data-en="Contact" data-fa="تماس">Contact</a
+          ><a href="#" data-en="Shipping & returns" data-fa="ارسال و بازگشت">Shipping & returns</a>
+        </div>
+        <p class="text-[10px] text-[#86868b]">© 2026 AbdOliDesk</p>
+      </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
