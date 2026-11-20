@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f5f7" />
+
+    <title>AbdOliDesk</title>
+
+    <link href="./assets/css/output.css" rel="stylesheet" />
+    <link href="./assets/css/customeStyle.css" rel="stylesheet" />
+    <link href="./assets/font/font.css" rel="stylesheet" />
+  </head>
+
+  <body class="bg-white text-[#1d1d1f] antialiased transition-colors duration-300 dark:bg-[#111113] dark:text-[#f5f5f7]">
+    <div class="bg-[#f5f5f7] px-4 py-2.5 text-center text-[11px] text-[#515154] dark:bg-[#202024] dark:text-[#d1d1d6]">
+      <span data-en="Thoughtful essentials for your everyday workspace." data-fa="لوازم کاربردی و خوش‌ساخت برای فضای کار روزمره شما."
+        >Thoughtful essentials for your everyday workspace.</span
+      >
+    </div>
+
+    <header class="sticky top-0 z-40 border-b border-black/[.06] bg-white/90 backdrop-blur-xl dark:border-white/[.08] dark:bg-[#111113]/90">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-4 lg:px-8">
+        <a href="#home" class="shrink-0 text-[19px] font-semibold tracking-[-.055em]">AbdOliDesk<span class="text-[#86868b]">.</span></a>
+
+        <nav class="hidden items-center gap-7 text-[12px] text-[#555559] dark:text-[#c5c5ca] md:flex">
+          <a href="#shop" class="transition hover:text-black dark:hover:text-white" data-en="Store" data-fa="فروشگاه">Store</a>
+          <a href="#categories" class="transition hover:text-black dark:hover:text-white" data-en="Categories" data-fa="دسته‌بندی‌ها">Categories</a>
+          <a href="#new" class="transition hover:text-black dark:hover:text-white" data-en="New arrivals" data-fa="تازه‌ها">New arrivals</a>
+          <a href="#about" class="transition hover:text-black dark:hover:text-white" data-en="About" data-fa="درباره ما">About</a>
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <button
+            id="languageToggle"
+            class="focus-ring rounded-full px-3 py-2 text-[11px] font-medium text-[#424245] transition hover:bg-[#f5f5f7] dark:text-[#e5e5e8] dark:hover:bg-[#252529]"
+            aria-label="Change language"
+          >
+            FA
+          </button>
+          <button
+            id="themeToggle"
+            class="focus-ring grid h-9 w-9 place-items-center rounded-full text-[#424245] transition hover:bg-[#f5f5f7] dark:text-[#e5e5e8] dark:hover:bg-[#252529]"
+            aria-label="Toggle color theme"
+          >
+            <svg id="sunIcon" class="hidden h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" />
+            </svg>
+            <svg id="moonIcon" class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.6 8.6 0 1 0 20.5 14.2Z" />
+            </svg>
+          </button>
+          <button
+            class="focus-ring hidden h-9 w-9 place-items-center rounded-full text-[#424245] transition hover:bg-[#f5f5f7] dark:text-[#e5e5e8] dark:hover:bg-[#252529] sm:grid"
+            aria-label="Search"
+          >
+            <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <circle cx="10.8" cy="10.8" r="6.8" />
+              <path d="m16 16 5 5" />
+            </svg>
+          </button>
+          <a
+            href="#shop"
+            class="focus-ring hidden rounded-full bg-[#1d1d1f] px-4 py-2.5 text-[11px] font-medium text-white transition hover:bg-black dark:bg-white dark:text-[#1d1d1f] dark:hover:bg-[#e5e5e7] sm:inline-flex"
+            data-en="Bag (0)"
+            data-fa="سبد خرید (۰)"
+            >Bag (0)</a
+          >
+          <button
+            id="mobileMenuButton"
+            class="focus-ring grid h-9 w-9 place-items-center rounded-full hover:bg-[#f5f5f7] dark:hover:bg-[#252529] md:hidden"
+            aria-label="Open menu"
+          >
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+          </button>
+        </div>
+      </div>
+      <nav id="mobileMenu" class="hidden border-t border-black/[.06] px-5 py-4 dark:border-white/[.08] md:hidden">
+        <div class="flex flex-col gap-4 text-[13px] text-[#555559] dark:text-[#d1d1d6]">
+          <a href="#shop" data-en="Store" data-fa="فروشگاه">Store</a>
+          <a href="#categories" data-en="Categories" data-fa="دسته‌بندی‌ها">Categories</a>
+          <a href="#new" data-en="New arrivals" data-fa="تازه‌ها">New arrivals</a>
+          <a href="#about" data-en="About" data-fa="درباره ما">About</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="about-page" class="mx-auto max-w-7xl px-5 py-10 lg:px-8">
+      <!-- Hero -->
+      <section class="relative overflow-hidden rounded-[30px] bg-[#f5f5f7] dark:bg-[#202024]">
+        <div class="grid items-center md:grid-cols-2">
+          <div class="relative z-10 px-7 py-12 sm:px-12 lg:px-16 lg:py-16">
+            <p class="mb-5 text-[10px] font-semibold uppercase tracking-[.2em] text-[#86868b]" data-en="ABOUT ABDOLIDESK" data-fa="درباره عبدولی‌دسک">
+              ABOUT ABDOLIDESK
+            </p>
+
+            <h1
+              class="max-w-lg text-4xl font-semibold leading-[1.15] tracking-[-.055em] sm:text-5xl lg:text-[58px]"
+              data-en="A better space for <span class='text-[#77777d]'>better ideas.</span>"
+              data-fa="فضایی بهتر برای <span class='text-[#77777d]'>ایده‌هایی بهتر.</span>"
+            >
+              A better space for <span class="text-[#77777d]">better ideas.</span>
+            </h1>
+
+            <p
+              class="mt-6 max-w-md text-[13px] leading-7 text-[#6e6e73] dark:text-[#b8b8be]"
+              data-en="We believe that a thoughtful workspace can make everyday work more enjoyable. That's why we bring together useful, simple, and well-designed essentials."
+              data-fa="ما باور داریم که یک فضای کاری اصولی می‌تواند کارهای روزمره را لذت‌بخش‌تر کند. به همین دلیل، مجموعه‌ای از لوازم کاربردی، ساده و خوش‌طراحی را گرد هم آورده‌ایم."
+            >
+              We believe that a thoughtful workspace can make everyday work more enjoyable. That's why we bring together useful, simple, and
+              well-designed essentials.
+            </p>
+
+            <a
+              href="./shop.html"
+              class="mt-8 inline-flex items-center gap-3 rounded-full bg-[#1d1d1f] px-6 py-3.5 text-[12px] font-medium text-white transition hover:-translate-y-0.5 hover:bg-black dark:bg-white dark:text-[#1d1d1f] dark:hover:bg-[#e5e5e7]"
+            >
+              <span data-en="Explore our store" data-fa="مشاهده فروشگاه">Explore our store</span>
+              <span class="flip-rtl">→</span>
+            </a>
+          </div>
+
+          <div class="relative min-h-[300px] md:min-h-[500px]">
+            <img
+              src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1100&q=85"
+              alt="Modern and bright workspace"
+              class="absolute inset-0 h-full w-full object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-r from-[#f5f5f7] via-transparent to-transparent dark:from-[#202024]"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Story -->
+      <section class="grid items-center gap-10 py-20 md:grid-cols-2 md:gap-16">
+        <div class="overflow-hidden rounded-[28px] bg-[#f5f5f7] dark:bg-[#202024]">
+          <img
+            src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=85"
+            alt="Workspace environment"
+            class="aspect-[4/3] w-full object-cover transition duration-700 hover:scale-105"
+          />
+        </div>
+
+        <div>
+          <p class="text-[10px] font-semibold uppercase tracking-[.18em] text-[#86868b]" data-en="OUR STORY" data-fa="داستان ما">OUR STORY</p>
+
+          <h2
+            class="mt-3 text-3xl font-semibold leading-tight tracking-[-.05em] sm:text-4xl"
+            data-en="Small details make a big difference."
+            data-fa="جزئیات کوچک، تفاوت‌های بزرگی می‌سازند."
+          >
+            Small details make a big difference.
+          </h2>
+
+          <p
+            class="mt-6 text-[13px] leading-8 text-[#6e6e73] dark:text-[#b8b8be]"
+            data-en="Your desk is more than just a place to work. It's where ideas take shape, projects come to life, and everyday moments happen. We created AbdOliDesk around this simple idea: the right tools can make your daily routine better."
+            data-fa="میز کار شما چیزی فراتر از یک محل برای انجام وظایف روزانه است. جایی است که ایده‌ها شکل می‌گیرند و پروژه‌ها به نتیجه می‌رسند. ما AbdOliDesk را با این باور ایجاد کردیم که ابزارهای مناسب می‌توانند کیفیت کار روزانه شما را بهتر کنند."
+          >
+            Your desk is more than just a place to work. It's where ideas take shape, projects come to life, and everyday moments happen. We created
+            AbdOliDesk around this simple idea: the right tools can make your daily routine better.
+          </p>
+
+          <p
+            class="mt-4 text-[13px] leading-8 text-[#6e6e73] dark:text-[#b8b8be]"
+            data-en="We focus on products that combine functionality, simplicity, and thoughtful design — without unnecessary complexity."
+            data-fa="تمرکز ما روی محصولاتی است که کاربردی بودن، سادگی و طراحی اصولی را در کنار هم قرار می‌دهند؛ بدون پیچیدگی‌های غیرضروری."
+          >
+            We focus on products that combine functionality, simplicity, and thoughtful design — without unnecessary complexity.
+          </p>
+        </div>
+      </section>
+
+      <!-- Values -->
+      <section class="py-14">
+        <div class="mb-10 max-w-xl">
+          <p class="text-[10px] font-semibold uppercase tracking-[.18em] text-[#86868b]" data-en="WHAT WE BELIEVE" data-fa="باورهای ما">
+            WHAT WE BELIEVE
+          </p>
+
+          <h2 class="mt-3 text-3xl font-semibold tracking-[-.05em]" data-en="What matters to us." data-fa="چه چیزهایی برای ما اهمیت دارند؟">
+            What matters to us.
+          </h2>
+
+          <p
+            class="mt-3 text-[13px] leading-7 text-[#6e6e73] dark:text-[#b8b8be]"
+            data-en="Every product should have a purpose and every detail should feel intentional."
+            data-fa="هر محصول باید کاربرد مشخصی داشته باشد و هر جزئیات با دقت انتخاب شود."
+          >
+            Every product should have a purpose and every detail should feel intentional.
+          </p>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Value 1 -->
+          <article class="rounded-[24px] bg-[#f5f5f7] p-7 dark:bg-[#202024]">
+            <div class="mb-7 grid h-12 w-12 place-items-center rounded-2xl bg-white dark:bg-[#303035]">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 7h16M7 4v6m10-6v6M5 13h14M7 17h10M9 21h6" />
+              </svg>
+            </div>
+
+            <h3 class="text-base font-semibold" data-en="Simplicity" data-fa="سادگی">Simplicity</h3>
+
+            <p
+              class="mt-3 text-[12px] leading-7 text-[#6e6e73] dark:text-[#b8b8be]"
+              data-en="We appreciate clean designs and practical solutions that make life easier."
+              data-fa="ما به طراحی‌های ساده و راهکارهای کاربردی که زندگی را آسان‌تر می‌کنند اهمیت می‌دهیم."
+            >
+              We appreciate clean designs and practical solutions that make life easier.
+            </p>
+          </article>
+
+          <!-- Value 2 -->
+          <article class="rounded-[24px] bg-[#f5f5f7] p-7 dark:bg-[#202024]">
+            <div class="mb-7 grid h-12 w-12 place-items-center rounded-2xl bg-white dark:bg-[#303035]">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z" />
+              </svg>
+            </div>
+
+            <h3 class="text-base font-semibold" data-en="Quality" data-fa="کیفیت">Quality</h3>
+
+            <p
+              class="mt-3 text-[12px] leading-7 text-[#6e6e73] dark:text-[#b8b8be]"
+              data-en="We value useful products with thoughtful details and reliable everyday performance."
+              data-fa="ما برای محصولات کاربردی با جزئیات دقیق و عملکرد قابل‌اعتماد ارزش قائلیم."
+            >
+              We value useful products with thoughtful details and reliable everyday performance.
+            </p>
+          </article>
+
+          <!-- Value 3 -->
+          <article class="rounded-[24px] bg-[#f5f5f7] p-7 dark:bg-[#202024]">
+            <div class="mb-7 grid h-12 w-12 place-items-center rounded-2xl bg-white dark:bg-[#303035]">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M20 11.5a8.4 8.4 0 0 1-8.5 8.5 9 9 0 0 1-4-.9L3 21l1.9-4.5a8.5 8.5 0 1 1 15.1-5Z" />
+                <path d="M8 11h8m-8 4h5" />
+              </svg>
+            </div>
+
+            <h3 class="text-base font-semibold" data-en="Customer first" data-fa="مشتری‌مداری">Customer first</h3>
+
+            <p
+              class="mt-3 text-[12px] leading-7 text-[#6e6e73] dark:text-[#b8b8be]"
+              data-en="We want every interaction with our store to feel simple, clear, and helpful."
+              data-fa="می‌خواهیم تجربه شما از فروشگاه ما ساده، شفاف و رضایت‌بخش باشد."
+            >
+              We want every interaction with our store to feel simple, clear, and helpful.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Why Choose Us -->
+      <section class="grid items-center gap-10 py-20 md:grid-cols-2 md:gap-16">
+        <div class="order-2 md:order-1">
+          <p class="text-[10px] font-semibold uppercase tracking-[.18em] text-[#86868b]" data-en="WHY ABDOLIDESK" data-fa="چرا عبدولی‌دسک؟">
+            WHY ABDOLIDESK
+          </p>
+
+          <h2
+            class="mt-3 text-3xl font-semibold leading-tight tracking-[-.05em] sm:text-4xl"
+            data-en="Everything starts with a better setup."
+            data-fa="همه‌چیز از یک فضای کاری بهتر شروع می‌شود."
+          >
+            Everything starts with a better setup.
+          </h2>
+
+          <p
+            class="mt-5 text-[13px] leading-8 text-[#6e6e73] dark:text-[#b8b8be]"
+            data-en="Finding the right accessories shouldn't be complicated. We make it easier to discover products that fit your workspace, your needs, and your everyday routine."
+            data-fa="پیدا کردن لوازم مناسب نباید کار پیچیده‌ای باشد. ما تلاش می‌کنیم انتخاب محصولاتی را که با فضای کار و نیازهای روزمره شما هماهنگ هستند، آسان‌تر کنیم."
+          >
+            Finding the right accessories shouldn't be complicated. We make it easier to discover products that fit your workspace, your needs, and
+            your everyday routine.
+          </p>
+
+          <div class="mt-7 space-y-4">
+            <div class="flex items-center gap-3">
+              <span class="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#e8e8eb] text-xs dark:bg-[#303035]">✓</span>
+              <p class="text-[12px]" data-en="Carefully selected products" data-fa="محصولات با دقت انتخاب‌شده">Carefully selected products</p>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <span class="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#e8e8eb] text-xs dark:bg-[#303035]">✓</span>
+              <p class="text-[12px]" data-en="Simple and practical solutions" data-fa="راهکارهای ساده و کاربردی">Simple and practical solutions</p>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <span class="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#e8e8eb] text-xs dark:bg-[#303035]">✓</span>
+              <p class="text-[12px]" data-en="A workspace that inspires you" data-fa="فضای کاری الهام‌بخش">A workspace that inspires you</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-1 overflow-hidden rounded-[28px] bg-[#f5f5f7] dark:bg-[#202024] md:order-2">
+          <img
+            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85"
+            alt="Minimal office workspace"
+            class="aspect-[4/3] w-full object-cover transition duration-700 hover:scale-105"
+          />
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="mb-8 rounded-[28px] bg-[#f5f5f7] px-6 py-12 text-center dark:bg-[#202024] sm:px-12 sm:py-16">
+        <p
+          class="text-[10px] font-semibold uppercase tracking-[.18em] text-[#86868b]"
+          data-en="MAKE YOURSELF AT HOME"
+          data-fa="به فضای خودتان خوش آمدید"
+        >
+          MAKE YOURSELF AT HOME
+        </p>
+
+        <h2
+          class="mx-auto mt-4 max-w-xl text-3xl font-semibold leading-tight tracking-[-.05em] sm:text-4xl"
+          data-en="Ready to create your ideal workspace?"
+          data-fa="آماده‌اید فضای کاری ایده‌آل خودتان را بسازید؟"
+        >
+          Ready to create your ideal workspace?
+        </h2>
+
+        <p
+          class="mx-auto mt-4 max-w-md text-[12px] leading-7 text-[#6e6e73] dark:text-[#b8b8be]"
+          data-en="Discover our collection and find the little things that make a big difference."
+          data-fa="مجموعه محصولات ما را ببینید و وسایلی را پیدا کنید که تغییرات بزرگی ایجاد می‌کنند."
+        >
+          Discover our collection and find the little things that make a big difference.
+        </p>
+
+        <a
+          href="./shop.html"
+          class="mt-7 inline-flex items-center gap-3 rounded-full bg-[#1d1d1f] px-7 py-3.5 text-[12px] font-medium text-white transition hover:-translate-y-0.5 hover:bg-black dark:bg-white dark:text-[#1d1d1f] dark:hover:bg-[#e5e5e7]"
+        >
+          <span data-en="Shop now" data-fa="مشاهده محصولات">Shop now</span>
+          <span class="flip-rtl">→</span>
+        </a>
+      </section>
+    </main>
+
+    <footer class="border-t border-black/[.06] dark:border-white/[.08]">
+      <div class="mx-auto flex max-w-7xl flex-col gap-6 px-5 py-9 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+        <div>
+          <a href="#home" class="text-[17px] font-semibold tracking-[-.05em]">AbdOliDesk<span class="text-[#86868b]">.</span></a>
+          <p class="mt-2 text-[10px] text-[#86868b]" data-en="A better space for everyday work." data-fa="فضایی بهتر برای کارهای هر روز.">
+            A better space for everyday work.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-x-6 gap-y-3 text-[11px] text-[#6e6e73] dark:text-[#b8b8be]">
+          <a href="#shop" data-en="Store" data-fa="فروشگاه">Store</a><a href="#about" data-en="About" data-fa="درباره ما">About</a
+          ><a href="#" data-en="Contact" data-fa="تماس">Contact</a
+          ><a href="#" data-en="Shipping & returns" data-fa="ارسال و بازگشت">Shipping & returns</a>
+        </div>
+        <p class="text-[10px] text-[#86868b]">© 2026 AbdOliDesk</p>
+      </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
