@@ -52,6 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   setLanguage(language);
-  
+
   // end for change dark mode and light mode
 });
