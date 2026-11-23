@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f5f7" />
+
+    <title>AbdOliDesk</title>
+
+    <link href="./assets/css/output.css" rel="stylesheet" />
+    <link href="./assets/css/customeStyle.css" rel="stylesheet" />
+    <link href="./assets/font/font.css" rel="stylesheet" />
+  </head>
+
+  <body class="bg-white text-[#1d1d1f] antialiased transition-colors duration-300 dark:bg-[#111113] dark:text-[#f5f5f7]">
+    <div class="bg-[#f5f5f7] px-4 py-2.5 text-center text-[11px] text-[#515154] dark:bg-[#202024] dark:text-[#d1d1d6]">
+      <span data-en="Thoughtful essentials for your everyday workspace." data-fa="لوازم کاربردی و خوش‌ساخت برای فضای کار روزمره شما."
+        >Thoughtful essentials for your everyday workspace.</span
+      >
+    </div>
+
+    <header class="sticky top-0 z-40 border-b border-black/[.06] bg-white/90 backdrop-blur-xl dark:border-white/[.08] dark:bg-[#111113]/90">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-4 lg:px-8">
+        <a href="#home" class="shrink-0 text-[19px] font-semibold tracking-[-.055em]">AbdOliDesk<span class="text-[#86868b]">.</span></a>
+
+        <nav class="hidden items-center gap-7 text-[12px] text-[#555559] dark:text-[#c5c5ca] md:flex">
+          <a href="#shop" class="transition hover:text-black dark:hover:text-white" data-en="Store" data-fa="فروشگاه">Store</a>
+          <a href="#categories" class="transition hover:text-black dark:hover:text-white" data-en="Categories" data-fa="دسته‌بندی‌ها">Categories</a>
+          <a href="#new" class="transition hover:text-black dark:hover:text-white" data-en="New arrivals" data-fa="تازه‌ها">New arrivals</a>
+          <a href="#about" class="transition hover:text-black dark:hover:text-white" data-en="About" data-fa="درباره ما">About</a>
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <button
+            id="languageToggle"
+            class="focus-ring rounded-full px-3 py-2 text-[11px] font-medium text-[#424245] transition hover:bg-[#f5f5f7] dark:text-[#e5e5e8] dark:hover:bg-[#252529]"
+            aria-label="Change language"
+          >
+            FA
+          </button>
+          <button
+            id="themeToggle"
+            class="focus-ring grid h-9 w-9 place-items-center rounded-full text-[#424245] transition hover:bg-[#f5f5f7] dark:text-[#e5e5e8] dark:hover:bg-[#252529]"
+            aria-label="Toggle color theme"
+          >
+            <svg id="sunIcon" class="hidden h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" />
+            </svg>
+            <svg id="moonIcon" class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.6 8.6 0 1 0 20.5 14.2Z" />
+            </svg>
+          </button>
+          <button
+            class="focus-ring hidden h-9 w-9 place-items-center rounded-full text-[#424245] transition hover:bg-[#f5f5f7] dark:text-[#e5e5e8] dark:hover:bg-[#252529] sm:grid"
+            aria-label="Search"
+          >
+            <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <circle cx="10.8" cy="10.8" r="6.8" />
+              <path d="m16 16 5 5" />
+            </svg>
+          </button>
+          <a
+            href="#shop"
+            class="focus-ring hidden rounded-full bg-[#1d1d1f] px-4 py-2.5 text-[11px] font-medium text-white transition hover:bg-black dark:bg-white dark:text-[#1d1d1f] dark:hover:bg-[#e5e5e7] sm:inline-flex"
+            data-en="Bag (0)"
+            data-fa="سبد خرید (۰)"
+            >Bag (0)</a
+          >
+          <button
+            id="mobileMenuButton"
+            class="focus-ring grid h-9 w-9 place-items-center rounded-full hover:bg-[#f5f5f7] dark:hover:bg-[#252529] md:hidden"
+            aria-label="Open menu"
+          >
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+          </button>
+        </div>
+      </div>
+      <nav id="mobileMenu" class="hidden border-t border-black/[.06] px-5 py-4 dark:border-white/[.08] md:hidden">
+        <div class="flex flex-col gap-4 text-[13px] text-[#555559] dark:text-[#d1d1d6]">
+          <a href="#shop" data-en="Store" data-fa="فروشگاه">Store</a>
+          <a href="#categories" data-en="Categories" data-fa="دسته‌بندی‌ها">Categories</a>
+          <a href="#new" data-en="New arrivals" data-fa="تازه‌ها">New arrivals</a>
+          <a href="#about" data-en="About" data-fa="درباره ما">About</a>
+        </div>
+      </nav>
+    </header>
+
+    <main
+      id="register-page"
+      class="flex min-h-[75vh] items-center justify-center bg-[#f5f5f7] px-5 py-16 text-[#1d1d1f] dark:bg-[#111113] dark:text-white"
+    >
+      <div class="w-full max-w-md">
+        <div class="mb-8 text-center">
+          <div class="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0D9373] text-2xl font-bold text-white">A</div>
+
+          <h1 class="text-3xl font-bold" data-en="Create Account" data-fa="ایجاد حساب کاربری">Create Account</h1>
+
+          <p
+            class="mt-3 text-sm text-gray-500 dark:text-gray-400"
+            data-en="Join us and enjoy a better shopping experience."
+            data-fa="به ما بپیوندید و تجربه خرید بهتری داشته باشید."
+          >
+            Join us and enjoy a better shopping experience.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-[#202024] sm:p-8">
+          <form id="registerForm" class="space-y-5">
+            <div>
+              <label for="registerName" class="mb-2 block text-sm font-semibold" data-en="Full Name" data-fa="نام و نام خانوادگی">Full Name</label>
+              <input
+                id="registerName"
+                type="text"
+                required
+                autocomplete="name"
+                placeholder="John Doe"
+                class="w-full rounded-xl border border-gray-200 bg-[#f5f5f7] px-4 py-3.5 text-sm outline-none transition focus:border-[#0D9373] dark:border-gray-700 dark:bg-[#18181b]"
+              />
+            </div>
+
+            <div>
+              <label for="registerEmail" class="mb-2 block text-sm font-semibold" data-en="Email Address" data-fa="آدرس ایمیل">Email Address</label>
+              <input
+                id="registerEmail"
+                type="email"
+                required
+                autocomplete="email"
+                placeholder="example@email.com"
+                class="w-full rounded-xl border border-gray-200 bg-[#f5f5f7] px-4 py-3.5 text-sm outline-none transition focus:border-[#0D9373] dark:border-gray-700 dark:bg-[#18181b]"
+              />
+            </div>
+
+            <div>
+              <label for="registerPassword" class="mb-2 block text-sm font-semibold" data-en="Password" data-fa="رمز عبور">Password</label>
+              <div class="relative">
+                <input
+                  id="registerPassword"
+                  type="password"
+                  required
+                  minlength="8"
+                  autocomplete="new-password"
+                  placeholder="Minimum 8 characters"
+                  class="w-full rounded-xl border border-gray-200 bg-[#f5f5f7] px-4 py-3.5 pe-12 text-sm outline-none transition focus:border-[#0D9373] dark:border-gray-700 dark:bg-[#18181b]"
+                />
+
+                <button
+                  type="button"
+                  onclick="toggleRegisterPassword('registerPassword')"
+                  class="absolute end-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-[#0D9373]"
+                  aria-label="Show password"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5">
+                    <path d="M2 12S5.5 5 12 5S22 12 22 12S18.5 19 12 19S2 12 2 12Z" stroke="currentColor" stroke-width="1.7" />
+                    <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.7" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div>
+              <label for="confirmPassword" class="mb-2 block text-sm font-semibold" data-en="Confirm Password" data-fa="تکرار رمز عبور"
+                >Confirm Password</label
+              >
+              <input
+                id="confirmPassword"
+                type="password"
+                required
+                minlength="8"
+                autocomplete="new-password"
+                placeholder="Repeat your password"
+                class="w-full rounded-xl border border-gray-200 bg-[#f5f5f7] px-4 py-3.5 text-sm outline-none transition focus:border-[#0D9373] dark:border-gray-700 dark:bg-[#18181b]"
+              />
+            </div>
+
+            <label class="flex cursor-pointer items-start gap-2 text-sm leading-6 text-gray-500 dark:text-gray-400">
+              <input type="checkbox" required class="mt-1 h-4 w-4 accent-[#0D9373]" />
+              <span>
+                <span data-en="I agree to the" data-fa="با">I agree to the</span>
+                <a href="./terms.html" class="font-semibold text-[#0D9373] hover:underline" data-en="Terms & Conditions" data-fa="قوانین و شرایط"
+                  >Terms & Conditions</a
+                >
+                <span data-en="and" data-fa="و">and</span>
+                <a href="./privacy.html" class="font-semibold text-[#0D9373] hover:underline" data-en="Privacy Policy" data-fa="حریم خصوصی"
+                  >Privacy Policy</a
+                >.
+              </span>
+            </label>
+
+            <button
+              type="submit"
+              class="w-full rounded-full bg-[#0D9373] py-4 text-sm font-semibold text-white transition hover:bg-[#08785e]"
+              data-en="Create Account"
+              data-fa="ایجاد حساب کاربری"
+            >
+              Create Account
+            </button>
+
+            <p id="registerMessage" class="hidden text-center text-sm text-red-500"></p>
+          </form>
+
+          <div class="my-6 flex items-center gap-4">
+            <div class="h-px flex-1 bg-gray-200 dark:bg-gray-700"></div>
+            <span class="text-xs text-gray-400" data-en="OR" data-fa="یا">OR</span>
+            <div class="h-px flex-1 bg-gray-200 dark:bg-gray-700"></div>
+          </div>
+
+          <button
+            type="button"
+            class="flex w-full items-center justify-center gap-3 rounded-full border border-gray-200 py-3.5 text-sm font-medium transition hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-[#18181b]"
+          >
+            <svg viewBox="0 0 24 24" class="h-5 w-5">
+              <path
+                fill="#4285F4"
+                d="M21.6 12.23c0-.72-.06-1.42-.18-2.09H12v3.95h5.38a4.6 4.6 0 0 1-2 3.02v2.47h3.25c1.9-1.75 2.97-4.33 2.97-7.35Z"
+              />
+              <path
+                fill="#34A853"
+                d="M12 22c2.7 0 4.97-.9 6.63-2.42l-3.25-2.47c-.9.6-2.05.96-3.38.96-2.6 0-4.8-1.76-5.59-4.13H3.05v2.55A10 10 0 0 0 12 22Z"
+              />
+              <path
+                fill="#FBBC05"
+                d="M6.41 13.94A6 6 0 0 1 6.1 12c0-.67.12-1.32.31-1.94V7.5H3.05A10 10 0 0 0 2 12c0 1.62.39 3.15 1.05 4.5l3.36-2.56Z"
+              />
+              <path
+                fill="#EA4335"
+                d="M12 5.93c1.47 0 2.8.5 3.84 1.52l2.88-2.88C16.97 2.94 14.7 2 12 2a10 10 0 0 0-8.95 5.5l3.36 2.56C7.2 7.69 9.4 5.93 12 5.93Z"
+              />
+            </svg>
+            <span data-en="Sign Up with Google" data-fa="ثبت‌نام با گوگل">Sign Up with Google</span>
+          </button>
+        </div>
+
+        <p class="mt-7 text-center text-sm text-gray-500 dark:text-gray-400">
+          <span data-en="Already have an account?" data-fa="قبلاً ثبت‌نام کرده‌اید؟">Already have an account?</span>
+          <a href="./login.html" class="font-semibold text-[#0D9373] hover:underline" data-en="Sign In" data-fa="وارد شوید">Sign In</a>
+        </p>
+      </div>
+    </main>
+
+    <script>
+      function toggleRegisterPassword(id) {
+        const input = document.getElementById(id);
+        input.type = input.type === "password" ? "text" : "password";
+      }
+
+      document.getElementById("registerForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const password = document.getElementById("registerPassword").value;
+        const confirmPassword = document.getElementById("confirmPassword").value;
+        const message = document.getElementById("registerMessage");
+
+        if (password !== confirmPassword) {
+          message.textContent = "Passwords do not match.";
+          message.classList.remove("hidden");
+          return;
+        }
+
+        message.classList.remove("hidden");
+        message.classList.remove("text-red-500");
+        message.classList.add("text-[#0D9373]");
+        message.textContent = "Registration form submitted successfully (Demo).";
+      });
+    </script>
+
+    <footer class="border-t border-black/[.06] dark:border-white/[.08]">
+      <div class="mx-auto flex max-w-7xl flex-col gap-6 px-5 py-9 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+        <div>
+          <a href="#home" class="text-[17px] font-semibold tracking-[-.05em]">AbdOliDesk<span class="text-[#86868b]">.</span></a>
+          <p class="mt-2 text-[10px] text-[#86868b]" data-en="A better space for everyday work." data-fa="فضایی بهتر برای کارهای هر روز.">
+            A better space for everyday work.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-x-6 gap-y-3 text-[11px] text-[#6e6e73] dark:text-[#b8b8be]">
+          <a href="#shop" data-en="Store" data-fa="فروشگاه">Store</a><a href="#about" data-en="About" data-fa="درباره ما">About</a
+          ><a href="#" data-en="Contact" data-fa="تماس">Contact</a
+          ><a href="#" data-en="Shipping & returns" data-fa="ارسال و بازگشت">Shipping & returns</a>
+        </div>
+        <p class="text-[10px] text-[#86868b]">© 2026 AbdOliDesk</p>
+      </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
