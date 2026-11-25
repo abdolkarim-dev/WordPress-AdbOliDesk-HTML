@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f5f7" />
+
+    <title>AbdOliDesk</title>
+
+    <link href="./assets/css/output.css" rel="stylesheet" />
+    <link href="./assets/css/customeStyle.css" rel="stylesheet" />
+    <link href="./assets/font/font.css" rel="stylesheet" />
+  </head>
+
+  <body class="bg-white text-[#1d1d1f] antialiased transition-colors duration-300 dark:bg-[#111113] dark:text-[#f5f5f7]">
+    <div class="bg-[#f5f5f7] px-4 py-2.5 text-center text-[11px] text-[#515154] dark:bg-[#202024] dark:text-[#d1d1d6]">
+      <span data-en="Thoughtful essentials for your everyday workspace." data-fa="لوازم کاربردی و خوش‌ساخت برای فضای کار روزمره شما."
+        >Thoughtful essentials for your everyday workspace.</span
+      >
+    </div>
+
+    <header class="sticky top-0 z-40 border-b border-black/[.06] bg-white/90 backdrop-blur-xl dark:border-white/[.08] dark:bg-[#111113]/90">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-4 lg:px-8">
+        <a href="#home" class="shrink-0 text-[19px] font-semibold tracking-[-.055em]">AbdOliDesk<span class="text-[#86868b]">.</span></a>
+
+        <nav class="hidden items-center gap-7 text-[12px] text-[#555559] dark:text-[#c5c5ca] md:flex">
+          <a href="#shop" class="transition hover:text-black dark:hover:text-white" data-en="Store" data-fa="فروشگاه">Store</a>
+          <a href="#categories" class="transition hover:text-black dark:hover:text-white" data-en="Categories" data-fa="دسته‌بندی‌ها">Categories</a>
+          <a href="#new" class="transition hover:text-black dark:hover:text-white" data-en="New arrivals" data-fa="تازه‌ها">New arrivals</a>
+          <a href="#about" class="transition hover:text-black dark:hover:text-white" data-en="About" data-fa="درباره ما">About</a>
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <button
+            id="languageToggle"
+            class="focus-ring rounded-full px-3 py-2 text-[11px] font-medium text-[#424245] transition hover:bg-[#f5f5f7] dark:text-[#e5e5e8] dark:hover:bg-[#252529]"
+            aria-label="Change language"
+          >
+            FA
+          </button>
+          <button
+            id="themeToggle"
+            class="focus-ring grid h-9 w-9 place-items-center rounded-full text-[#424245] transition hover:bg-[#f5f5f7] dark:text-[#e5e5e8] dark:hover:bg-[#252529]"
+            aria-label="Toggle color theme"
+          >
+            <svg id="sunIcon" class="hidden h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" />
+            </svg>
+            <svg id="moonIcon" class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.6 8.6 0 1 0 20.5 14.2Z" />
+            </svg>
+          </button>
+          <button
+            class="focus-ring hidden h-9 w-9 place-items-center rounded-full text-[#424245] transition hover:bg-[#f5f5f7] dark:text-[#e5e5e8] dark:hover:bg-[#252529] sm:grid"
+            aria-label="Search"
+          >
+            <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <circle cx="10.8" cy="10.8" r="6.8" />
+              <path d="m16 16 5 5" />
+            </svg>
+          </button>
+          <a
+            href="#shop"
+            class="focus-ring hidden rounded-full bg-[#1d1d1f] px-4 py-2.5 text-[11px] font-medium text-white transition hover:bg-black dark:bg-white dark:text-[#1d1d1f] dark:hover:bg-[#e5e5e7] sm:inline-flex"
+            data-en="Bag (0)"
+            data-fa="سبد خرید (۰)"
+            >Bag (0)</a
+          >
+          <button
+            id="mobileMenuButton"
+            class="focus-ring grid h-9 w-9 place-items-center rounded-full hover:bg-[#f5f5f7] dark:hover:bg-[#252529] md:hidden"
+            aria-label="Open menu"
+          >
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+          </button>
+        </div>
+      </div>
+      <nav id="mobileMenu" class="hidden border-t border-black/[.06] px-5 py-4 dark:border-white/[.08] md:hidden">
+        <div class="flex flex-col gap-4 text-[13px] text-[#555559] dark:text-[#d1d1d6]">
+          <a href="#shop" data-en="Store" data-fa="فروشگاه">Store</a>
+          <a href="#categories" data-en="Categories" data-fa="دسته‌بندی‌ها">Categories</a>
+          <a href="#new" data-en="New arrivals" data-fa="تازه‌ها">New arrivals</a>
+          <a href="#about" data-en="About" data-fa="درباره ما">About</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="product-details-page" class="bg-[#f5f5f7] text-[#1d1d1f] dark:bg-[#111113] dark:text-white">
+      <!-- Breadcrumb -->
+      <section class="mx-auto max-w-7xl px-5 pt-8 sm:px-8">
+        <nav class="flex flex-wrap items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+          <a href="./index.html" class="hover:text-[#0D9373]" data-en="Home" data-fa="خانه">Home</a>
+          <span>/</span>
+          <a href="./shop.html" class="hover:text-[#0D9373]" data-en="Shop" data-fa="فروشگاه">Shop</a>
+          <span>/</span>
+          <span class="text-[#1d1d1f] dark:text-white" data-en="Product Details" data-fa="جزئیات محصول">Product Details</span>
+        </nav>
+      </section>
+
+      <!-- Product -->
+      <section class="mx-auto max-w-7xl px-5 py-10 sm:px-8 lg:py-16">
+        <div class="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16">
+          <!-- Product Images -->
+          <div class="space-y-4">
+            <div class="relative overflow-hidden rounded-3xl bg-white dark:bg-[#202024]">
+              <span
+                class="absolute start-5 top-5 z-10 rounded-full bg-[#0D9373] px-4 py-2 text-xs font-semibold text-white"
+                data-en="Best Seller"
+                data-fa="پرفروش"
+                >Best Seller</span
+              >
+
+              <img
+                id="mainProductImage"
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1000"
+                alt="Product image"
+                class="h-[350px] w-full object-contain p-8 sm:h-[480px]"
+              />
+            </div>
+
+            <div class="grid grid-cols-4 gap-3">
+              <button
+                type="button"
+                onclick="changeProductImage(this)"
+                class="overflow-hidden rounded-2xl border-2 border-[#0D9373] bg-white p-2 dark:bg-[#202024]"
+              >
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300" class="h-20 w-full object-contain" alt="Product view 1" />
+              </button>
+
+              <button
+                type="button"
+                onclick="changeProductImage(this)"
+                class="overflow-hidden rounded-2xl border border-gray-200 bg-white p-2 hover:border-[#0D9373] dark:border-gray-700 dark:bg-[#202024]"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=300"
+                  class="h-20 w-full object-contain"
+                  alt="Product view 2"
+                />
+              </button>
+
+              <button
+                type="button"
+                onclick="changeProductImage(this)"
+                class="overflow-hidden rounded-2xl border border-gray-200 bg-white p-2 hover:border-[#0D9373] dark:border-gray-700 dark:bg-[#202024]"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=300"
+                  class="h-20 w-full object-contain"
+                  alt="Product view 3"
+                />
+              </button>
+
+              <button
+                type="button"
+                onclick="changeProductImage(this)"
+                class="overflow-hidden rounded-2xl border border-gray-200 bg-white p-2 hover:border-[#0D9373] dark:border-gray-700 dark:bg-[#202024]"
+              >
+                <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?w=300" class="h-20 w-full object-contain" alt="Product view 4" />
+              </button>
+            </div>
+          </div>
+
+          <!-- Product Information -->
+          <div class="flex flex-col">
+            <p class="mb-3 text-sm font-medium text-[#0D9373]" data-en="Footwear / Sneakers" data-fa="پوشاک / کفش ورزشی">Footwear / Sneakers</p>
+
+            <h1 class="text-3xl font-bold tracking-tight sm:text-4xl" data-en="Nike Air Max 270" data-fa="کفش نایکی ایر مکس ۲۷۰">Nike Air Max 270</h1>
+
+            <div class="mt-4 flex flex-wrap items-center gap-3">
+              <div class="flex items-center gap-1 text-amber-400">★★★★★</div>
+              <span class="text-sm text-gray-500 dark:text-gray-400">(128 <span data-en="Reviews" data-fa="نظر">Reviews</span>)</span>
+              <span class="text-sm text-[#0D9373]" data-en="In Stock" data-fa="موجود در انبار">In Stock</span>
+            </div>
+
+            <div class="mt-6 flex items-center gap-3">
+              <span class="text-3xl font-bold">$149.00</span>
+              <span class="text-lg text-gray-400 line-through">$189.00</span>
+              <span class="rounded-full bg-red-100 px-3 py-1 text-xs font-semibold text-red-600 dark:bg-red-500/10 dark:text-red-400">-21%</span>
+            </div>
+
+            <p
+              class="mt-6 text-sm leading-7 text-gray-600 dark:text-gray-400"
+              data-en="Experience all-day comfort and modern style with the Nike Air Max 270. Featuring a lightweight design, breathable upper and responsive cushioning, it's perfect for everyday wear."
+              data-fa="با کفش نایکی ایر مکس ۲۷۰ راحتی و استایل مدرن را تجربه کنید. طراحی سبک، رویه تنفس‌پذیر و کفی نرم آن را برای استفاده روزمره مناسب کرده است."
+            >
+              Experience all-day comfort and modern style with the Nike Air Max 270. Featuring a lightweight design, breathable upper and responsive
+              cushioning, it's perfect for everyday wear.
+            </p>
+
+            <!-- Color -->
+            <div class="mt-8">
+              <div class="mb-3 flex items-center justify-between">
+                <h3 class="text-sm font-semibold" data-en="Select Color" data-fa="انتخاب رنگ">Select Color</h3>
+                <span id="selectedColor" class="text-sm text-gray-500 dark:text-gray-400">Red</span>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <button type="button" onclick="selectProductColor(this, 'Red')" class="h-9 w-9 rounded-full border-2 border-[#0D9373] bg-red-500 p-1">
+                  <span class="block h-full w-full rounded-full bg-red-500"></span>
+                </button>
+                <button
+                  type="button"
+                  onclick="selectProductColor(this, 'Black')"
+                  class="h-9 w-9 rounded-full border border-gray-300 bg-black p-1 dark:border-gray-600"
+                >
+                  <span class="block h-full w-full rounded-full bg-black"></span>
+                </button>
+                <button
+                  type="button"
+                  onclick="selectProductColor(this, 'White')"
+                  class="h-9 w-9 rounded-full border border-gray-300 bg-white p-1 dark:border-gray-600"
+                >
+                  <span class="block h-full w-full rounded-full bg-white"></span>
+                </button>
+                <button
+                  type="button"
+                  onclick="selectProductColor(this, 'Blue')"
+                  class="h-9 w-9 rounded-full border border-gray-300 bg-blue-500 p-1 dark:border-gray-600"
+                >
+                  <span class="block h-full w-full rounded-full bg-blue-500"></span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Size -->
+            <div class="mt-8">
+              <div class="mb-3 flex items-center justify-between">
+                <h3 class="text-sm font-semibold" data-en="Select Size" data-fa="انتخاب سایز">Select Size</h3>
+                <button type="button" class="text-sm text-[#0D9373] hover:underline" data-en="Size Guide" data-fa="راهنمای سایز">Size Guide</button>
+              </div>
+
+              <div class="grid grid-cols-5 gap-2">
+                <button
+                  type="button"
+                  onclick="selectProductSize(this)"
+                  class="rounded-xl border border-gray-200 bg-white py-3 text-sm hover:border-[#0D9373] dark:border-gray-700 dark:bg-[#202024]"
+                >
+                  39
+                </button>
+                <button
+                  type="button"
+                  onclick="selectProductSize(this)"
+                  class="rounded-xl border border-gray-200 bg-white py-3 text-sm hover:border-[#0D9373] dark:border-gray-700 dark:bg-[#202024]"
+                >
+                  40
+                </button>
+                <button
+                  type="button"
+                  onclick="selectProductSize(this)"
+                  class="rounded-xl border-2 border-[#0D9373] bg-[#0D9373]/10 py-3 text-sm font-semibold text-[#0D9373]"
+                >
+                  41
+                </button>
+                <button
+                  type="button"
+                  onclick="selectProductSize(this)"
+                  class="rounded-xl border border-gray-200 bg-white py-3 text-sm hover:border-[#0D9373] dark:border-gray-700 dark:bg-[#202024]"
+                >
+                  42
+                </button>
+                <button
+                  type="button"
+                  onclick="selectProductSize(this)"
+                  class="rounded-xl border border-gray-200 bg-white py-3 text-sm hover:border-[#0D9373] dark:border-gray-700 dark:bg-[#202024]"
+                >
+                  43
+                </button>
+              </div>
+            </div>
+
+            <!-- Quantity -->
+            <div class="mt-8">
+              <h3 class="mb-3 text-sm font-semibold" data-en="Quantity" data-fa="تعداد">Quantity</h3>
+              <div class="inline-flex items-center overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700">
+                <button type="button" onclick="changeProductQuantity(-1)" class="px-4 py-3 text-lg hover:bg-gray-100 dark:hover:bg-[#303036]">
+                  −
+                </button>
+                <span id="productQuantity" class="min-w-12 text-center text-sm font-semibold">1</span>
+                <button type="button" onclick="changeProductQuantity(1)" class="px-4 py-3 text-lg hover:bg-gray-100 dark:hover:bg-[#303036]">
+                  +
+                </button>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="mt-8 grid grid-cols-[1fr_auto] gap-3">
+              <button
+                type="button"
+                class="rounded-full bg-[#0D9373] px-6 py-4 text-sm font-semibold text-white transition hover:bg-[#08785e]"
+                data-en="Add to Cart"
+                data-fa="افزودن به سبد خرید"
+              >
+                Add to Cart
+              </button>
+
+              <button
+                type="button"
+                aria-label="Add to wishlist"
+                class="flex h-14 w-14 items-center justify-center rounded-full border border-gray-200 text-xl transition hover:border-[#0D9373] hover:text-[#0D9373] dark:border-gray-700"
+              >
+                ♡
+              </button>
+            </div>
+
+            <button
+              type="button"
+              class="mt-3 w-full rounded-full border border-gray-200 py-4 text-sm font-semibold transition hover:border-[#0D9373] hover:text-[#0D9373] dark:border-gray-700"
+              data-en="Buy Now"
+              data-fa="خرید فوری"
+            >
+              Buy Now
+            </button>
+
+            <!-- Extra Info -->
+            <div class="mt-8 space-y-4 border-t border-gray-200 pt-6 dark:border-gray-800">
+              <div class="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400">
+                <span class="text-xl">🚚</span>
+                <span data-en="Free shipping on orders over $100" data-fa="ارسال رایگان برای سفارش‌های بالای ۱۰۰ دلار"
+                  >Free shipping on orders over $100</span
+                >
+              </div>
+              <div class="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400">
+                <span class="text-xl">↩</span>
+                <span data-en="30-day easy return policy" data-fa="امکان بازگشت آسان تا ۳۰ روز">30-day easy return policy</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400">
+                <span class="text-xl">🔒</span>
+                <span data-en="Secure and protected payment" data-fa="پرداخت امن و محافظت‌شده">Secure and protected payment</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Product Description -->
+      <section class="border-y border-gray-200 bg-white py-14 dark:border-gray-800 dark:bg-[#18181b]">
+        <div class="mx-auto max-w-7xl px-5 sm:px-8">
+          <h2 class="text-2xl font-bold" data-en="Product Description" data-fa="توضیحات محصول">Product Description</h2>
+          <p
+            class="mt-5 max-w-3xl text-sm leading-8 text-gray-600 dark:text-gray-400"
+            data-en="Designed for everyday movement, the Nike Air Max 270 combines iconic Air cushioning with a contemporary silhouette. Its breathable materials and supportive construction provide lasting comfort throughout your day."
+            data-fa="کفش نایکی ایر مکس ۲۷۰ برای استفاده روزمره طراحی شده و با ترکیب کفی نرم و طراحی مدرن، راحتی مناسبی فراهم می‌کند. متریال تنفس‌پذیر و ساختار استاندارد آن باعث راحتی بیشتر در طول روز می‌شود."
+          >
+            Designed for everyday movement, the Nike Air Max 270 combines iconic Air cushioning with a contemporary silhouette. Its breathable
+            materials and supportive construction provide lasting comfort throughout your day.
+          </p>
+
+          <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="rounded-2xl bg-[#f5f5f7] p-5 dark:bg-[#202024]">
+              <p class="text-xs text-gray-500" data-en="Brand" data-fa="برند">Brand</p>
+              <p class="mt-2 font-semibold">Nike</p>
+            </div>
+            <div class="rounded-2xl bg-[#f5f5f7] p-5 dark:bg-[#202024]">
+              <p class="text-xs text-gray-500" data-en="Material" data-fa="جنس">Material</p>
+              <p class="mt-2 font-semibold" data-en="Mesh & Rubber" data-fa="پارچه مش و لاستیک">Mesh & Rubber</p>
+            </div>
+            <div class="rounded-2xl bg-[#f5f5f7] p-5 dark:bg-[#202024]">
+              <p class="text-xs text-gray-500" data-en="Style" data-fa="سبک">Style</p>
+              <p class="mt-2 font-semibold" data-en="Casual / Sport" data-fa="روزمره / ورزشی">Casual / Sport</p>
+            </div>
+            <div class="rounded-2xl bg-[#f5f5f7] p-5 dark:bg-[#202024]">
+              <p class="text-xs text-gray-500" data-en="SKU" data-fa="شناسه محصول">SKU</p>
+              <p class="mt-2 font-semibold">NK-270-001</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Related Products -->
+      <section class="mx-auto max-w-7xl px-5 py-16 sm:px-8">
+        <div class="mb-8 flex items-center justify-between">
+          <div>
+            <p class="mb-2 text-sm text-[#0D9373]" data-en="You may also like" data-fa="شاید این‌ها را هم بپسندید">You may also like</p>
+            <h2 class="text-2xl font-bold" data-en="Related Products" data-fa="محصولات مرتبط">Related Products</h2>
+          </div>
+          <a href="./shop.html" class="text-sm font-medium text-[#0D9373] hover:underline" data-en="View All" data-fa="مشاهده همه">View All</a>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+          <a href="./product-details.html" class="group">
+            <div class="overflow-hidden rounded-2xl bg-white dark:bg-[#202024]">
+              <img
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500"
+                alt="Nike Red Shoes"
+                class="h-48 w-full object-contain p-5 transition duration-500 group-hover:scale-105 sm:h-64"
+              />
+            </div>
+            <h3 class="mt-4 text-sm font-semibold" data-en="Nike Air Max" data-fa="نایکی ایر مکس">Nike Air Max</h3>
+            <p class="mt-2 font-semibold">$129.00</p>
+          </a>
+
+          <a href="./product-details.html" class="group">
+            <div class="overflow-hidden rounded-2xl bg-white dark:bg-[#202024]">
+              <img
+                src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=500"
+                alt="Nike Sneakers"
+                class="h-48 w-full object-contain p-5 transition duration-500 group-hover:scale-105 sm:h-64"
+              />
+            </div>
+            <h3 class="mt-4 text-sm font-semibold" data-en="Nike Everyday" data-fa="نایکی روزمره">Nike Everyday</h3>
+            <p class="mt-2 font-semibold">$119.00</p>
+          </a>
+
+          <a href="./product-details.html" class="group">
+            <div class="overflow-hidden rounded-2xl bg-white dark:bg-[#202024]">
+              <img
+                src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=500"
+                alt="Sport Shoes"
+                class="h-48 w-full object-contain p-5 transition duration-500 group-hover:scale-105 sm:h-64"
+              />
+            </div>
+            <h3 class="mt-4 text-sm font-semibold" data-en="Sport Runner" data-fa="کفش اسپرت رانر">Sport Runner</h3>
+            <p class="mt-2 font-semibold">$99.00</p>
+          </a>
+
+          <a href="./product-details.html" class="group">
+            <div class="overflow-hidden rounded-2xl bg-white dark:bg-[#202024]">
+              <img
+                src="https://images.unsplash.com/photo-1552346154-21d32810aba3?w=500"
+                alt="Classic Sneakers"
+                class="h-48 w-full object-contain p-5 transition duration-500 group-hover:scale-105 sm:h-64"
+              />
+            </div>
+            <h3 class="mt-4 text-sm font-semibold" data-en="Classic Sneakers" data-fa="کفش کلاسیک">Classic Sneakers</h3>
+            <p class="mt-2 font-semibold">$139.00</p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-black/[.06] dark:border-white/[.08]">
+      <div class="mx-auto flex max-w-7xl flex-col gap-6 px-5 py-9 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+        <div>
+          <a href="#home" class="text-[17px] font-semibold tracking-[-.05em]">AbdOliDesk<span class="text-[#86868b]">.</span></a>
+          <p class="mt-2 text-[10px] text-[#86868b]" data-en="A better space for everyday work." data-fa="فضایی بهتر برای کارهای هر روز.">
+            A better space for everyday work.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-x-6 gap-y-3 text-[11px] text-[#6e6e73] dark:text-[#b8b8be]">
+          <a href="#shop" data-en="Store" data-fa="فروشگاه">Store</a><a href="#about" data-en="About" data-fa="درباره ما">About</a
+          ><a href="#" data-en="Contact" data-fa="تماس">Contact</a
+          ><a href="#" data-en="Shipping & returns" data-fa="ارسال و بازگشت">Shipping & returns</a>
+        </div>
+        <p class="text-[10px] text-[#86868b]">© 2026 AbdOliDesk</p>
+      </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+ 
+  </body>
+</html>
