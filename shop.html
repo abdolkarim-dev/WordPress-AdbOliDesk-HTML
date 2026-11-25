@@ -86,71 +86,93 @@
       </nav>
     </header>
 
-    <main id="shop-page" class="mx-auto max-w-7xl px-5 py-10 lg:px-8">
-      <!-- Page Heading -->
+    <main id="shop-page" class="mx-auto max-w-7xl px-5 py-8 lg:px-8">
+      <!-- Page Title -->
       <div class="mb-8">
-        <p class="text-[10px] font-semibold uppercase tracking-[.18em] text-[#86868b]">AbdOliDesk / Store</p>
+        <p
+          class="mb-2 text-[10px] font-semibold uppercase tracking-[.18em] text-[#86868b]"
+          data-en="AbdOliDesk / Store"
+          data-fa="عبدولی‌دسک / فروشگاه"
+        >
+          AbdOliDesk / Store
+        </p>
 
-        <div class="mt-3 flex flex-wrap items-end justify-between gap-4">
+        <div class="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <h1 class="text-3xl font-semibold tracking-[-.05em] sm:text-4xl">Shop all products</h1>
-            <p class="mt-2 text-sm text-[#86868b]">Thoughtful essentials for your everyday workspace.</p>
+            <h1 class="text-3xl font-semibold tracking-[-.05em] sm:text-4xl" data-en="Shop all products" data-fa="همه محصولات">Shop all products</h1>
+
+            <p
+              class="mt-2 text-sm text-[#86868b]"
+              data-en="Thoughtful essentials for your everyday workspace."
+              data-fa="لوازم کاربردی و خوش‌ساخت برای فضای کار روزمره شما."
+            >
+              Thoughtful essentials for your everyday workspace.
+            </p>
           </div>
         </div>
       </div>
 
-      <!-- Main Layout -->
-      <div class="grid grid-cols-1 gap-8 lg:grid-cols-[240px_1fr]">
-        <!-- Filters Sidebar -->
-        <aside class="space-y-7">
+      <!-- Shop Layout -->
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-[230px_minmax(0,1fr)]">
+        <!-- Sidebar Filters -->
+        <aside class="space-y-6">
           <!-- Categories -->
           <div class="border-b border-black/[.08] pb-6 dark:border-white/[.08]">
-            <h3 class="mb-4 text-sm font-semibold">Categories</h3>
+            <h3 class="mb-4 text-sm font-semibold" data-en="Categories" data-fa="دسته‌بندی‌ها">Categories</h3>
 
-            <div class="space-y-3 text-[13px] text-[#6e6e73] dark:text-[#b8b8be]">
-              <label class="flex cursor-pointer items-center justify-between">
+            <div class="space-y-3 text-[12px] text-[#6e6e73] dark:text-[#b8b8be]">
+              <label class="flex cursor-pointer items-center justify-between gap-2">
                 <span class="flex items-center gap-2">
                   <input type="checkbox" class="accent-[#1d1d1f] dark:accent-white" />
-                  Desk setup
+                  <span data-en="Desk setup" data-fa="تجهیزات میز کار">Desk setup</span>
                 </span>
-                <span class="text-[11px]">12</span>
+                <span>12</span>
               </label>
 
-              <label class="flex cursor-pointer items-center justify-between">
+              <label class="flex cursor-pointer items-center justify-between gap-2">
                 <span class="flex items-center gap-2">
                   <input type="checkbox" class="accent-[#1d1d1f] dark:accent-white" />
-                  Keyboards & mice
+                  <span data-en="Keyboards & mice" data-fa="کیبورد و ماوس">Keyboards & mice</span>
                 </span>
-                <span class="text-[11px]">18</span>
+                <span>18</span>
               </label>
 
-              <label class="flex cursor-pointer items-center justify-between">
+              <label class="flex cursor-pointer items-center justify-between gap-2">
                 <span class="flex items-center gap-2">
                   <input type="checkbox" class="accent-[#1d1d1f] dark:accent-white" />
-                  Lighting
+                  <span data-en="Lighting" data-fa="نورپردازی">Lighting</span>
                 </span>
-                <span class="text-[11px]">8</span>
+                <span>8</span>
               </label>
 
-              <label class="flex cursor-pointer items-center justify-between">
+              <label class="flex cursor-pointer items-center justify-between gap-2">
                 <span class="flex items-center gap-2">
                   <input type="checkbox" class="accent-[#1d1d1f] dark:accent-white" />
-                  Tech accessories
+                  <span data-en="Tech accessories" data-fa="لوازم دیجیتال">Tech accessories</span>
                 </span>
-                <span class="text-[11px]">24</span>
+                <span>24</span>
+              </label>
+
+              <label class="flex cursor-pointer items-center justify-between gap-2">
+                <span class="flex items-center gap-2">
+                  <input type="checkbox" class="accent-[#1d1d1f] dark:accent-white" />
+                  <span data-en="Audio" data-fa="صوتی">Audio</span>
+                </span>
+                <span>9</span>
               </label>
             </div>
           </div>
 
-          <!-- Price -->
+          <!-- Price Filter -->
           <div class="border-b border-black/[.08] pb-6 dark:border-white/[.08]">
-            <h3 class="mb-4 text-sm font-semibold">Price range</h3>
+            <h3 class="mb-4 text-sm font-semibold" data-en="Price range" data-fa="محدوده قیمت">Price range</h3>
 
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-2">
               <input
                 type="number"
                 placeholder="Min"
-                class="w-full rounded-xl border border-black/[.08] bg-transparent px-3 py-2.5 text-xs outline-none focus:border-black dark:border-white/[.12] dark:focus:border-white"
+                aria-label="Minimum price"
+                class="w-full min-w-0 rounded-xl border border-black/[.08] bg-transparent px-3 py-2.5 text-xs outline-none transition focus:border-black dark:border-white/[.12] dark:focus:border-white"
               />
 
               <span class="text-[#86868b]">–</span>
@@ -158,16 +180,17 @@
               <input
                 type="number"
                 placeholder="Max"
-                class="w-full rounded-xl border border-black/[.08] bg-transparent px-3 py-2.5 text-xs outline-none focus:border-black dark:border-white/[.12] dark:focus:border-white"
+                aria-label="Maximum price"
+                class="w-full min-w-0 rounded-xl border border-black/[.08] bg-transparent px-3 py-2.5 text-xs outline-none transition focus:border-black dark:border-white/[.12] dark:focus:border-white"
               />
             </div>
           </div>
 
           <!-- Brand -->
           <div class="border-b border-black/[.08] pb-6 dark:border-white/[.08]">
-            <h3 class="mb-4 text-sm font-semibold">Brand</h3>
+            <h3 class="mb-4 text-sm font-semibold" data-en="Brand" data-fa="برند">Brand</h3>
 
-            <div class="space-y-3 text-[13px] text-[#6e6e73] dark:text-[#b8b8be]">
+            <div class="space-y-3 text-[12px] text-[#6e6e73] dark:text-[#b8b8be]">
               <label class="flex cursor-pointer items-center gap-2">
                 <input type="checkbox" class="accent-[#1d1d1f] dark:accent-white" />
                 Logitech
@@ -192,80 +215,88 @@
 
           <!-- Availability -->
           <div class="border-b border-black/[.08] pb-6 dark:border-white/[.08]">
-            <h3 class="mb-4 text-sm font-semibold">Availability</h3>
+            <h3 class="mb-4 text-sm font-semibold" data-en="Availability" data-fa="موجودی">Availability</h3>
 
-            <label class="flex cursor-pointer items-center gap-2 text-[13px] text-[#6e6e73] dark:text-[#b8b8be]">
+            <label class="flex cursor-pointer items-center gap-2 text-[12px] text-[#6e6e73] dark:text-[#b8b8be]">
               <input type="checkbox" class="accent-[#1d1d1f] dark:accent-white" />
-              In stock
+
+              <span data-en="In stock" data-fa="موجود">In stock</span>
             </label>
           </div>
 
+          <!-- Clear Filters -->
           <button
             class="w-full rounded-full border border-black/[.12] py-3 text-xs font-medium transition hover:bg-[#f5f5f7] dark:border-white/[.12] dark:hover:bg-[#252529]"
+            data-en="Clear all filters"
+            data-fa="حذف همه فیلترها"
           >
             Clear all filters
           </button>
         </aside>
 
-        <!-- Products Area -->
-        <section>
-          <!-- Top Toolbar -->
-          <div class="mb-6 flex flex-wrap items-center justify-between gap-4">
+        <!-- Products Section -->
+        <section class="min-w-0">
+          <!-- Toolbar -->
+          <div class="mb-6 flex flex-wrap items-center justify-between gap-3">
+            <!-- Results & Filter -->
             <div class="flex items-center gap-3">
-              <p class="text-xs text-[#86868b]">Showing <span class="font-medium text-[#1d1d1f] dark:text-white">24</span> products</p>
+              <p class="text-xs text-[#86868b]">
+                <span data-en="Showing" data-fa="نمایش">Showing</span>
 
-              <button class="rounded-full border border-black/[.08] px-3 py-2 text-[11px] lg:hidden dark:border-white/[.1]">Filters</button>
+                <span class="font-medium text-[#1d1d1f] dark:text-white">24</span>
+
+                <span data-en="products" data-fa="محصول">products</span>
+              </p>
+
+              <button
+                class="inline-flex items-center gap-2 rounded-full border border-black/[.08] px-3 py-2 text-[11px] transition hover:bg-[#f5f5f7] dark:border-white/[.1] dark:hover:bg-[#252529] lg:hidden"
+              >
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M4 5h16M7 12h10M10 19h4" />
+                  <circle cx="8" cy="5" r="2" />
+                  <circle cx="15" cy="12" r="2" />
+                  <circle cx="12" cy="19" r="2" />
+                </svg>
+
+                <span data-en="Filters" data-fa="فیلترها">Filters</span>
+              </button>
             </div>
 
-            <div class="flex items-center gap-3">
-              <div class="hidden items-center gap-1 sm:flex">
-                <button class="rounded-lg p-2 text-[#86868b] hover:bg-[#f5f5f7] dark:hover:bg-[#252529]">
-                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <rect x="3" y="3" width="7" height="7" />
-                    <rect x="14" y="3" width="7" height="7" />
-                    <rect x="3" y="14" width="7" height="7" />
-                    <rect x="14" y="14" width="7" height="7" />
-                  </svg>
-                </button>
+            <!-- Sort -->
+            <div class="flex items-center gap-2">
+              <span class="hidden text-[11px] text-[#86868b] sm:inline" data-en="Sort by" data-fa="مرتب‌سازی"> Sort by </span>
 
-                <button class="rounded-lg p-2 text-[#86868b] hover:bg-[#f5f5f7] dark:hover:bg-[#252529]">
-                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <rect x="3" y="3" width="5" height="18" />
-                    <rect x="13" y="3" width="8" height="18" />
-                  </svg>
-                </button>
-              </div>
-
-              <select class="rounded-full border border-black/[.08] bg-transparent px-4 py-2.5 text-xs outline-none dark:border-white/[.1]">
-                <option>Featured</option>
-                <option>Price: low to high</option>
-                <option>Price: high to low</option>
-                <option>Newest</option>
+              <select class="rounded-full border border-black/[.08] bg-transparent px-3 py-2.5 text-[11px] outline-none dark:border-white/[.1]">
+                <option data-en="Featured" data-fa="منتخب">Featured</option>
+                <option data-en="Price: low to high" data-fa="قیمت: کم به زیاد">Price: low to high</option>
+                <option data-en="Price: high to low" data-fa="قیمت: زیاد به کم">Price: high to low</option>
+                <option data-en="Newest" data-fa="جدیدترین">Newest</option>
               </select>
             </div>
           </div>
 
-          <!-- Product Grid -->
-          <div class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+          <!-- Products Grid -->
+          <div class="grid grid-cols-2 gap-x-4 gap-y-7 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
             <!-- Product 1 -->
             <article class="product-card group">
               <div class="relative overflow-hidden rounded-[22px] bg-[#f5f5f7] dark:bg-[#202024]">
                 <img
                   src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=700&q=80"
                   alt="Laptop stand"
-                  class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
+                  class="product-image aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
                 />
 
                 <button
                   class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-white/90 text-lg text-[#424245] backdrop-blur transition hover:scale-110 dark:bg-black/50 dark:text-white"
+                  aria-label="Add to favorites"
                 >
                   ♡
                 </button>
               </div>
 
               <div class="pt-3">
-                <p class="text-[9px] uppercase tracking-[.13em] text-[#86868b]">Desk setup</p>
-                <h3 class="mt-1 text-[12px] font-medium">Aluminium Laptop Stand</h3>
+                <p class="text-[9px] uppercase tracking-[.13em] text-[#86868b]" data-en="Desk setup" data-fa="تجهیزات میز کار">Desk setup</p>
+                <h3 class="mt-1 text-[12px] font-medium" data-en="Aluminium Laptop Stand" data-fa="پایه لپ‌تاپ آلومینیومی">Aluminium Laptop Stand</h3>
                 <p class="mt-2 text-xs font-semibold">$48.00</p>
               </div>
             </article>
@@ -276,19 +307,22 @@
                 <img
                   src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=700&q=80"
                   alt="Mechanical keyboard"
-                  class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
+                  class="product-image aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
                 />
 
                 <button
                   class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-white/90 text-lg text-[#424245] backdrop-blur transition hover:scale-110 dark:bg-black/50 dark:text-white"
+                  aria-label="Add to favorites"
                 >
                   ♡
                 </button>
               </div>
 
               <div class="pt-3">
-                <p class="text-[9px] uppercase tracking-[.13em] text-[#86868b]">Input devices</p>
-                <h3 class="mt-1 text-[12px] font-medium">Wireless Mechanical Keyboard</h3>
+                <p class="text-[9px] uppercase tracking-[.13em] text-[#86868b]" data-en="Input devices" data-fa="لوازم ورودی">Input devices</p>
+                <h3 class="mt-1 text-[12px] font-medium" data-en="Wireless Mechanical Keyboard" data-fa="کیبورد مکانیکی بی‌سیم">
+                  Wireless Mechanical Keyboard
+                </h3>
                 <p class="mt-2 text-xs font-semibold">$89.00</p>
               </div>
             </article>
@@ -299,25 +333,28 @@
                 <img
                   src="https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=700&q=80"
                   alt="Wireless mouse"
-                  class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
+                  class="product-image aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
                 />
 
                 <span
                   class="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1.5 text-[9px] font-medium text-[#424245] backdrop-blur dark:bg-black/50 dark:text-white"
+                  data-en="New"
+                  data-fa="جدید"
                 >
                   New
                 </span>
 
                 <button
                   class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-white/90 text-lg text-[#424245] backdrop-blur transition hover:scale-110 dark:bg-black/50 dark:text-white"
+                  aria-label="Add to favorites"
                 >
                   ♡
                 </button>
               </div>
 
               <div class="pt-3">
-                <p class="text-[9px] uppercase tracking-[.13em] text-[#86868b]">Input devices</p>
-                <h3 class="mt-1 text-[12px] font-medium">Contour Wireless Mouse</h3>
+                <p class="text-[9px] uppercase tracking-[.13em] text-[#86868b]" data-en="Input devices" data-fa="لوازم ورودی">Input devices</p>
+                <h3 class="mt-1 text-[12px] font-medium" data-en="Contour Wireless Mouse" data-fa="ماوس بی‌سیم کانتور">Contour Wireless Mouse</h3>
                 <p class="mt-2 text-xs font-semibold">$56.00</p>
               </div>
             </article>
@@ -328,19 +365,20 @@
                 <img
                   src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=700&q=80"
                   alt="Desk lamp"
-                  class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
+                  class="product-image aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
                 />
 
                 <button
                   class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-white/90 text-lg text-[#424245] backdrop-blur transition hover:scale-110 dark:bg-black/50 dark:text-white"
+                  aria-label="Add to favorites"
                 >
                   ♡
                 </button>
               </div>
 
               <div class="pt-3">
-                <p class="text-[9px] uppercase tracking-[.13em] text-[#86868b]">Lighting</p>
-                <h3 class="mt-1 text-[12px] font-medium">Minimal Desk Light</h3>
+                <p class="text-[9px] uppercase tracking-[.13em] text-[#86868b]" data-en="Lighting" data-fa="نورپردازی">Lighting</p>
+                <h3 class="mt-1 text-[12px] font-medium" data-en="Minimal Desk Light" data-fa="چراغ رومیزی مینیمال">Minimal Desk Light</h3>
                 <p class="mt-2 text-xs font-semibold">$64.00</p>
               </div>
             </article>
@@ -351,18 +389,22 @@
                 <img
                   src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=700&q=80"
                   alt="Laptop"
-                  class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
+                  class="product-image aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
                 />
+
                 <button
                   class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-white/90 text-lg text-[#424245] backdrop-blur dark:bg-black/50 dark:text-white"
+                  aria-label="Add to favorites"
                 >
                   ♡
                 </button>
               </div>
 
               <div class="pt-3">
-                <p class="text-[9px] uppercase tracking-[.13em] text-[#86868b]">Tech accessories</p>
-                <h3 class="mt-1 text-[12px] font-medium">MacBook Pro 14</h3>
+                <p class="text-[9px] uppercase tracking-[.13em] text-[#86868b]" data-en="Tech accessories" data-fa="لوازم دیجیتال">
+                  Tech accessories
+                </p>
+                <h3 class="mt-1 text-[12px] font-medium" data-en="MacBook Pro 14" data-fa="مک‌بوک پرو ۱۴">MacBook Pro 14</h3>
                 <p class="mt-2 text-xs font-semibold">$1,599.00</p>
               </div>
             </article>
@@ -373,23 +415,28 @@
                 <img
                   src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=700&q=80"
                   alt="Headphones"
-                  class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
+                  class="product-image aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
                 />
+
                 <span
                   class="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1.5 text-[9px] font-medium text-[#424245] backdrop-blur dark:bg-black/50 dark:text-white"
+                  data-en="Best seller"
+                  data-fa="پرفروش"
                 >
                   Best seller
                 </span>
+
                 <button
-                  class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-white/90 text-lg text-[#424245] backdrop-blur dark:bg-black/50 dark:text-white"
+                  class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-white/90 text-lg text-[#424245] backdrop-blur transition hover:scale-110 dark:bg-black/50 dark:text-white"
+                  aria-label="Add to favorites"
                 >
                   ♡
                 </button>
               </div>
 
               <div class="pt-3">
-                <p class="text-[9px] uppercase tracking-[.13em] text-[#86868b]">Audio</p>
-                <h3 class="mt-1 text-[12px] font-medium">Wireless Headphones</h3>
+                <p class="text-[9px] uppercase tracking-[.13em] text-[#86868b]" data-en="Audio" data-fa="صوتی">Audio</p>
+                <h3 class="mt-1 text-[12px] font-medium" data-en="Wireless Headphones" data-fa="هدفون بی‌سیم">Wireless Headphones</h3>
                 <p class="mt-2 text-xs font-semibold">$129.00</p>
               </div>
             </article>
@@ -400,18 +447,20 @@
                 <img
                   src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=700&q=80"
                   alt="Computer workspace"
-                  class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
+                  class="product-image aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
                 />
+
                 <button
                   class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-white/90 text-lg text-[#424245] backdrop-blur dark:bg-black/50 dark:text-white"
+                  aria-label="Add to favorites"
                 >
                   ♡
                 </button>
               </div>
 
               <div class="pt-3">
-                <p class="text-[9px] uppercase tracking-[.13em] text-[#86868b]">Desk setup</p>
-                <h3 class="mt-1 text-[12px] font-medium">Studio Display</h3>
+                <p class="text-[9px] uppercase tracking-[.13em] text-[#86868b]" data-en="Desk setup" data-fa="تجهیزات میز کار">Desk setup</p>
+                <h3 class="mt-1 text-[12px] font-medium" data-en="Studio Display" data-fa="نمایشگر استودیو">Studio Display</h3>
                 <p class="mt-2 text-xs font-semibold">$799.00</p>
               </div>
             </article>
@@ -422,18 +471,22 @@
                 <img
                   src="https://images.unsplash.com/photo-1524678606370-a47ad44c5b5c?auto=format&fit=crop&w=700&q=80"
                   alt="Smart speaker"
-                  class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
+                  class="product-image aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
                 />
+
                 <button
                   class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-white/90 text-lg text-[#424245] backdrop-blur dark:bg-black/50 dark:text-white"
+                  aria-label="Add to favorites"
                 >
                   ♡
                 </button>
               </div>
 
               <div class="pt-3">
-                <p class="text-[9px] uppercase tracking-[.13em] text-[#86868b]">Tech accessories</p>
-                <h3 class="mt-1 text-[12px] font-medium">Smart Home Speaker</h3>
+                <p class="text-[9px] uppercase tracking-[.13em] text-[#86868b]" data-en="Tech accessories" data-fa="لوازم دیجیتال">
+                  Tech accessories
+                </p>
+                <h3 class="mt-1 text-[12px] font-medium" data-en="Smart Home Speaker" data-fa="اسپیکر هوشمند">Smart Home Speaker</h3>
                 <p class="mt-2 text-xs font-semibold">$99.00</p>
               </div>
             </article>
@@ -441,23 +494,43 @@
 
           <!-- Pagination -->
           <div class="mt-12 flex items-center justify-center gap-2">
-            <button class="grid h-9 w-9 place-items-center rounded-full border border-black/[.08] text-xs dark:border-white/[.1]">←</button>
+            <button
+              class="grid h-9 w-9 place-items-center rounded-full border border-black/[.08] text-xs transition hover:bg-[#f5f5f7] dark:border-white/[.1] dark:hover:bg-[#252529]"
+            >
+              <span class="flip-rtl">←</span>
+            </button>
 
             <button class="grid h-9 w-9 place-items-center rounded-full bg-[#1d1d1f] text-xs text-white dark:bg-white dark:text-[#1d1d1f]">1</button>
 
-            <button class="grid h-9 w-9 place-items-center rounded-full border border-black/[.08] text-xs dark:border-white/[.1]">2</button>
+            <button
+              class="grid h-9 w-9 place-items-center rounded-full border border-black/[.08] text-xs transition hover:bg-[#f5f5f7] dark:border-white/[.1] dark:hover:bg-[#252529]"
+            >
+              2
+            </button>
 
-            <button class="grid h-9 w-9 place-items-center rounded-full border border-black/[.08] text-xs dark:border-white/[.1]">3</button>
+            <button
+              class="grid h-9 w-9 place-items-center rounded-full border border-black/[.08] text-xs transition hover:bg-[#f5f5f7] dark:border-white/[.1] dark:hover:bg-[#252529]"
+            >
+              3
+            </button>
 
             <span class="px-2 text-xs text-[#86868b]">...</span>
 
-            <button class="grid h-9 w-9 place-items-center rounded-full border border-black/[.08] text-xs dark:border-white/[.1]">8</button>
+            <button
+              class="grid h-9 w-9 place-items-center rounded-full border border-black/[.08] text-xs transition hover:bg-[#f5f5f7] dark:border-white/[.1] dark:hover:bg-[#252529]"
+            >
+              8
+            </button>
 
-            <button class="grid h-9 w-9 place-items-center rounded-full border border-black/[.08] text-xs dark:border-white/[.1]">→</button>
+            <button
+              class="grid h-9 w-9 place-items-center rounded-full border border-black/[.08] text-xs transition hover:bg-[#f5f5f7] dark:border-white/[.1] dark:hover:bg-[#252529]"
+            >
+              <span class="flip-rtl">→</span>
+            </button>
           </div>
         </section>
       </div>
-    </main> 
+    </main>
 
     <footer class="border-t border-black/[.06] dark:border-white/[.08]">
       <div class="mx-auto flex max-w-7xl flex-col gap-6 px-5 py-9 sm:flex-row sm:items-center sm:justify-between lg:px-8">
